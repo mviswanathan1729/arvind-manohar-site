@@ -64,6 +64,65 @@
       color:var(--text);
       font-size:13px;
       line-height:1.6;
+      word-wrap:break-word;
+      word-break:break-word;
+      overflow-wrap:break-word;
+      -webkit-hyphens:auto;
+      hyphens:auto;
+    }
+    
+    pre.copy{
+      display:block;
+      width:100%;
+      box-sizing:border-box;
+    }
+    
+    /* Mobile improvements for code blocks */
+    @media (max-width: 768px) {
+      .copy{
+        font-size:12px;
+        line-height:1.7;
+        padding:0;
+      }
+      .script{
+        padding:12px;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        max-width:100%;
+        box-sizing:border-box;
+      }
+      pre.copy{
+        max-width:100%;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+      }
+      details{
+        padding:10px 12px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .copy{
+        font-size:11px;
+        line-height:1.8;
+      }
+      .script{
+        padding:10px;
+        border-radius:10px;
+      }
+      .detail-body{
+        font-size:12px;
+      }
+      details{
+        padding:8px 10px;
+        border-radius:10px;
+      }
+      summary{
+        font-size:14px;
+      }
     }
     .note{
       color:var(--muted);
@@ -94,8 +153,13 @@
       <a href="index.html" style="text-decoration:none; color:inherit;">
         <strong>Arvind Manohar</strong>
       </a>
-      <span>Performance Copywriter · eCommerce Ads, Email & Funnels</span>
+      <span>Performance Copywriter · Ads, Email & Funnels</span>
     </div>
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="links" aria-label="Primary">
       <a href="index.html">
         <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -140,21 +204,6 @@
       Full examples and additional context are available in the detailed portfolio.
     </p>
 
-    <div class="pillbar" aria-label="Portfolio quick links">
-      <a class="pill" href="#paid-acq">Paid Acquisition</a>
-      <a class="pill" href="#email-lifecycle">Email & Lifecycle Revenue</a>
-      <a class="pill" href="#conversion-offers">Conversion & Offers</a>
-      <a class="pill" href="#longform">Long-Form Persuasion</a>
-      <a class="pill" href="#authority">Authority Content</a>
-    </div>
-
-    <div style="margin-top:18px;" class="mini-cta">
-      <a class="btn primary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">
-        View Full Portfolio on Notion →
-      </a>
-      <a class="btn secondary" href="contact.html">Contact →</a>
-    </div>
-
     <p class="note">
       Some work is under NDA. Where needed, examples are shared as redacted excerpts, anonymized drafts, or structure/framework breakdowns.
     </p>
@@ -167,23 +216,12 @@
         <h2>Paid Acquisition</h2>
         <p class="muted">Ads and scripts built for testing, iteration, and scale.</p>
 
-        <!-- Sub-category TOC inside Paid Acquisition -->
-        <nav class="toc" aria-label="Paid acquisition subcategories">
-          <a href="#meta-ads">Meta Ads</a>
-          <a href="#youtube-ads">YouTube Ads</a>
-          <a href="#meta-variations">Meta Variations (9-figure brand)</a>
-          <a href="#ugc-briefs">UGC Ads & Creator Briefs</a>
-          <a href="#beauty-ecom-meta">Beauty eCom Meta Ads</a>
-          <a href="#supplement-ecom">Supplement eCom Ads</a>
-        </nav>
       </div>
-      <div class="mini-cta">
-        <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View more →</a>
-      </div>
+
     </div>
 
     <!-- META ADS -->
-    <details id="meta-ads" open>
+    <details id="meta-ads">
       <summary>Meta Ads — Scripts (AI Automation Coach, 7-figure)</summary>
       <div class="detail-body">
         <p class="muted" style="margin:0 0 10px;">
@@ -564,7 +602,7 @@ Click ‘Learn More’ now and let’s take your business to the next level.</pr
 
     <!-- UGC BRIEFS -->
     <details id="ugc-briefs">
-      <summary>UGC Ads & Creator Briefs (Cat Litter Brand, 7-figure)</summary>
+      <summary>Meta Ads — UGC & Creator Briefs (Cat Litter Brand, 7-figure)</summary>
       <div class="detail-body">
         <p class="muted" style="margin:0 0 10px;">
           Creator-style scripts with scene direction, on-screen text, and beat-by-beat structure.
@@ -588,7 +626,7 @@ Click ‘Learn More’ now and let’s take your business to the next level.</pr
 
     <!-- SUPPLEMENT ECOM ADS -->
     <details id="supplement-ecom">
-      <summary>Supplement eCom Ads (8-figure brands)</summary>
+      <summary>Meta Ads — Supplement eCom (8-figure brands)</summary>
       <div class="detail-body">
         <p class="muted" style="margin:0 0 10px;">
           Long-form VSL concept + short-form ad with clear avatar, mass desire, and testing rationale.
@@ -608,22 +646,12 @@ Click ‘Learn More’ now and let’s take your business to the next level.</pr
           <h2>Email & Lifecycle Revenue</h2>
           <p class="muted">Lifecycle sequences designed to turn subscribers into customers (and customers into repeat buyers).</p>
     
-          <!-- Sub-category TOC inside Email -->
-          <nav class="toc" aria-label="Email subcategories">
-            <a href="#welcome-seq">Welcome Sequence</a>
-            <a href="#promo-seq">Promo Sequence</a>
-            <a href="#abandoned-cart">Abandoned Cart</a>
-          </nav>
         </div>
-        <div class="mini-cta">
-          <a class="btn secondary"
-             href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-             target="_blank" rel="noopener">View more →</a>
-        </div>
+
       </div>
     
       <!-- WELCOME SEQUENCE -->
-      <details id="welcome-seq" open>
+      <details id="welcome-seq">
         <summary>eCom Welcome Sequence (Pet eCom Brand, 8-figure)</summary>
         <div class="detail-body">
           <p class="muted" style="margin:0 0 10px;">
@@ -1131,11 +1159,7 @@ Click ‘Learn More’ now and let’s take your business to the next level.</pr
     Reply to this email with the word “HELP” and we’ll be able to assist you.</pre>
           </div>
     
-          <div style="margin-top:12px;" class="mini-cta">
-            <a class="btn secondary"
-               href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-               target="_blank" rel="noopener">View full abandoned cart sequence →</a>
-          </div>
+
     
         </div>
       </details>
@@ -1156,26 +1180,17 @@ Click ‘Learn More’ now and let’s take your business to the next level.</pr
         Organized by intent: promo, value, urgency, testimonials, stories, and upsells.
       </p>
 
-      <nav class="toc" aria-label="Emails subcategories">
-        <a href="#emails-promo">Promo</a>
-        <a href="#emails-value">Free Value</a>
-        <a href="#emails-urgency">Urgency</a>
-        <a href="#emails-testimonials">Testimonials</a>
-        <a href="#emails-stories">Story</a>
-        <a href="#emails-upsells">Upsell</a>
-      </nav>
     </div>
-    <div class="mini-cta">
-      <a class="btn secondary"
-         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-         target="_blank" rel="noopener">View more →</a>
-    </div>
+
   </div>
 
   <!-- PROMO EMAILS -->
-  <details id="emails-promo" open>
+  <details id="emails-promo">
     <summary>Promo Emails</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Direct promotional emails designed to drive immediate sales and conversions. Focus on clear offers, urgency, and value-driven messaging.
+      </p>
       <div class="script" id="promo-email-1">
         <h4>Promo Email #1 — Dating coach (8-figure)</h4>
         <div class="meta">
@@ -1372,6 +1387,9 @@ See you inside,
   <details id="emails-value">
     <summary>Free Value Emails</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Educational and value-first emails that build trust and authority without direct selling. Designed to nurture relationships and position expertise.
+      </p>
       <div class="script" id="value-email-1">
         <h4>Free Value Email #1 — IG coach (7-figure)</h4>
         <div class="meta">
@@ -1551,6 +1569,9 @@ P.S. Whenever you’re ready, here are 3 ways I can help ya succeed with eCommer
   <details id="emails-urgency">
     <summary>Urgency Emails</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Time-sensitive emails that create urgency through deadlines, limited availability, or expiring offers. Built to drive immediate action.
+      </p>
       <div class="script" id="urgency-email-1">
         <h4>Urgency Email #1 — B2B coach (8-figure)</h4>
         <div class="meta">
@@ -1683,6 +1704,9 @@ Talk soon,
   <details id="emails-testimonials">
     <summary>Testimonial Emails</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Social proof-driven emails that showcase customer success stories and results. Designed to overcome objections and build credibility.
+      </p>
       <div class="script" id="testimonial-email-1">
         <h4>Testimonial Email #1 — B2B coach (7-figure)</h4>
         <div class="meta">
@@ -1764,6 +1788,9 @@ See you on the other side,
   <details id="emails-stories">
     <summary>Story Emails</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Narrative-driven emails that use storytelling to connect emotionally, build rapport, and deliver messages through relatable experiences.
+      </p>
       <div class="script" id="story-email-1">
         <h4>Story Email #1 — Mindset coach (7-figure)</h4>
         <div class="meta">
@@ -1844,6 +1871,9 @@ Signing off,
   <details id="emails-upsells">
     <summary>Upsell Emails</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Post-purchase emails designed to increase customer lifetime value through complementary offers, upgrades, and additional products or services.
+      </p>
       <div class="script" id="upsell-email-1">
         <h4>Upsell Email #1 — Dating coach (8-figure)</h4>
         <div class="meta">
@@ -1932,24 +1962,18 @@ Your friend,
             Each example includes the Reel script and the paired caption.
           </p>
     
-          <nav class="toc" aria-label="Reels subcategories">
-            <a href="#reel-1">Reel #1</a>
-            <a href="#reel-2">Reel #2</a>
-            <a href="#reel-3">Reel #3</a>
-          </nav>
         </div>
     
-        <div class="mini-cta">
-          <a class="btn secondary"
-             href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-             target="_blank" rel="noopener">View more →</a>
-        </div>
+
       </div>
     
       <!-- Reel 1 -->
-      <details id="reel-1" open>
-        <summary>Instagram Reel #1 — YouTube automation coach (7-figure)</summary>
+      <details id="reel-1">
+        <summary>Instagram Reel — YouTube Automation Coach (7-figure)</summary>
         <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Short-form Reel script with matching caption designed for high retention and engagement. Uses personal story hook with clear CTA to drive comments and shares.
+          </p>
           <div class="script">
             <h4>Reel Script</h4>
             <div class="meta">
@@ -2042,8 +2066,11 @@ Your friend,
     
       <!-- Reel 2 -->
       <details id="reel-2">
-        <summary>Instagram Reel #2 — Real estate coach event promo (9-figure)</summary>
+        <summary>Instagram Reel — Real Estate Coach Event Promo (9-figure)</summary>
         <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Event promotion Reel script with comment-to-get-CTA format. Designed to generate event sign-ups while building anticipation through visual storytelling.
+          </p>
           <div class="script">
             <h4>Reel Script</h4>
             <div class="meta">
@@ -2140,8 +2167,11 @@ Your friend,
     
       <!-- Reel 3 -->
       <details id="reel-3">
-        <summary>Instagram Reel #3 — Dating coach (7-figure)</summary>
+        <summary>Instagram Reel — Dating Coach (7-figure)</summary>
         <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Reel script designed to drive engagement through relatable content and comment-driven CTA. Uses hook-driven format to maximize retention and interaction.
+          </p>
           <div class="script">
             <h4>Reel Script</h4>
             <div class="meta">
@@ -2256,13 +2286,7 @@ Your friend,
         with a “View full script” toggle so the page stays scannable.
       </p>
     </section>
-  
-    <!-- =========================
-     DROP-IN UPDATE (LinkedIn Posts):
-     Add this NEW section to portfolio.html
-     Recommended placement:
-       - after the "Emails" section (or after IG Reels/Captions)
-     ========================= -->
+
 
 <section class="card pad" id="linkedin-posts" style="margin-top:18px;">
   <div class="section-head">
@@ -2273,24 +2297,17 @@ Your friend,
         Examples below are shown as excerpts for scannability.
       </p>
 
-      <nav class="toc" aria-label="LinkedIn post examples">
-        <a href="#li-post-1">Post 1</a>
-        <a href="#li-post-2">Post 2</a>
-        <a href="#li-post-3">Post 3</a>
-      </nav>
     </div>
 
-    <div class="mini-cta">
-      <a class="btn secondary"
-         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-         target="_blank" rel="noopener">View full context →</a>
-    </div>
   </div>
 
   <!-- Post 1 -->
-  <details id="li-post-1" open>
-    <summary>Post 1 — Motivation story (camel photo)</summary>
+  <details id="li-post-1">
+    <summary>LinkedIn Post — Motivation Story (Real Estate Coach, 9-figure)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Visual hook-driven post that uses a personal story to deliver a motivational message. Designed for high engagement and shares.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Format: Story</span>
@@ -2333,8 +2350,11 @@ And don’t let anyone else discourage you from following your dream.
 
   <!-- Post 2 -->
   <details id="li-post-2">
-    <summary>Post 2 — Event promo (Cancun) + comment CTA</summary>
+    <summary>LinkedIn Post — Event Promo (Real Estate Coach, 9-figure)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Event promotion post with comment-to-get-CTA format. Designed to generate leads while building anticipation for the event.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Format: Event promo</span>
@@ -2372,8 +2392,11 @@ and I don’t know when this kind of opportunity will come next.</pre>
 
   <!-- Post 3 -->
   <details id="li-post-3">
-    <summary>Post 3 — Career pivot story (beach photo) + engagement prompt</summary>
+    <summary>LinkedIn Post — Career Pivot Story (Real Estate Coach, 9-figure)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Personal narrative post that uses a career transition story to build relatability and drive engagement through comments.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Format: Story</span>
@@ -2452,9 +2475,6 @@ I’d love to hear them.
             and stronger differentiation.
           </p>
     
-          <nav class="toc" aria-label="Product page examples">
-            <a href="#pp-1">Sleep Mask PDP</a>
-          </nav>
         </div>
     
         <div class="mini-cta">
@@ -2464,9 +2484,12 @@ I’d love to hear them.
         </div>
       </div>
     
-      <details id="pp-1" open>
-        <summary>Sleep Mask Product Page — 3D Contour Silk Sleep Mask (sample)</summary>
+      <details id="pp-1">
+        <summary>Product Page — Sleep Mask (eCommerce Brand)</summary>
         <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            E-commerce product page copy focused on benefit-driven messaging, premium positioning, and clear differentiation from competitors.
+          </p>
           <div class="script">
             <div class="meta">
               <span class="badge">Format: PDP</span>
@@ -2553,12 +2576,6 @@ I’d love to hear them.
       </details>
     </section>
 
-    <!-- =========================
-     DROP-IN UPDATE (Sales Pages):
-     Add this NEW section to portfolio.html
-     Recommended placement:
-       - after "Landing Pages" (and before Product Pages, or after Product Pages)
-     ========================= -->
 
 <section class="card pad" id="sales-pages" style="margin-top:18px;">
   <div class="section-head">
@@ -2570,23 +2587,17 @@ I’d love to hear them.
         Examples below are shown as excerpts for scannability.
       </p>
 
-      <nav class="toc" aria-label="Sales page examples">
-        <a href="#sp-1">FE Sales Page</a>
-        <a href="#sp-2">PT Sales Page</a>
-      </nav>
     </div>
 
-    <div class="mini-cta">
-      <a class="btn secondary"
-         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-         target="_blank" rel="noopener">View full context →</a>
-    </div>
   </div>
 
   <!-- Sales Page 1 -->
-  <details id="sp-1" open>
-    <summary>FE Sales Page — Spiritual Freedom Program (ACTIVE mE)</summary>
+  <details id="sp-1">
+    <summary>Sales Page — Spiritual Freedom Program (ACTIVE mE)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Long-form sales page built around identity transformation and belief shifting. Uses story-led positioning with strong offer stacking and pricing justification.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Format: Long-form</span>
@@ -2646,8 +2657,11 @@ FAQs + final CTA included.</pre>
 
   <!-- Sales Page 2 -->
   <details id="sp-2">
-    <summary>PT Sales Page — Primal Method 2.0 (Playbook App subscription)</summary>
+    <summary>Sales Page — Primal Method 2.0 (Playbook App Subscription)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Subscription-based sales page that positions a mobile app as a comprehensive training system. Focus on mechanism, social proof, and clear value stacking.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Format: Long-form</span>
@@ -2716,22 +2730,18 @@ Includes a 7-day trial + guarantee framing + FAQs.</pre>
             framework → offer → scarcity → CTA. Examples shown as excerpts for scannability.
           </p>
     
-          <nav class="toc" aria-label="VSL script examples">
-            <a href="#vsl-1">VSL 1</a>
-          </nav>
         </div>
     
-        <div class="mini-cta">
-          <a class="btn secondary"
-             href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-             target="_blank" rel="noopener">View full context →</a>
-        </div>
+
       </div>
     
       <!-- VSL 1 -->
-      <details id="vsl-1" open>
-        <summary>VSL 1 — YouTube Growth Coach (VCP framework)</summary>
+      <details id="vsl-1">
+        <summary>VSL Script — YouTube Growth Coach (VCP Framework)</summary>
         <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Video Sales Letter script structured around the VCP (Visibility, Consumability, Profitability) framework. Designed to hold attention through belief shifting and clear mechanism delivery.
+          </p>
           <div class="script">
             <div class="meta">
               <span class="badge">Format: VSL / Webinar script</span>
@@ -2802,23 +2812,18 @@ Includes a 7-day trial + guarantee framing + FAQs.</pre>
         Examples shown as excerpts for scannability.
       </p>
 
-      <nav class="toc" aria-label="Website copy examples">
-        <a href="#web-1">Homepage</a>
-        <a href="#web-2">About Page</a>
-      </nav>
     </div>
 
-    <div class="mini-cta">
-      <a class="btn secondary"
-         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-         target="_blank" rel="noopener">View full context →</a>
-    </div>
+
   </div>
 
   <!-- Homepage -->
-  <details id="web-1" open>
+  <details id="web-1">
     <summary>Homepage — Creative Business Coach (7-Figure Brand)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Homepage copy structured as a content ecosystem rather than a single-offer funnel. Designed to capture leads at multiple intent levels through clear offer pathways.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Page: Homepage</span>
@@ -2873,6 +2878,9 @@ Join CBL 2.0.</pre>
   <details id="web-2">
     <summary>About Page — Founder Story + Brand Mission</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        About page copy that uses personal narrative to build authority and connection. Combines founder story with brand mission to create emotional resonance.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Page: About</span>
@@ -2932,10 +2940,6 @@ Let’s turn your passion into a thriving business.</pre>
             Examples shown as excerpts for scannability.
           </p>
     
-          <nav class="toc" aria-label="YouTube script examples">
-            <a href="#yt-script-1">Script 1</a>
-            <a href="#yt-script-2">Script 2</a>
-          </nav>
         </div>
     
         <div class="mini-cta">
@@ -2946,9 +2950,12 @@ Let’s turn your passion into a thriving business.</pre>
       </div>
     
       <!-- Script 1 -->
-      <details id="yt-script-1" open>
-        <summary>Script 1 — “Marketing Lessons Hidden in Squid Game” (Witty + scene directions)</summary>
+      <details id="yt-script-1">
+        <summary>YouTube Script — "Marketing Lessons Hidden in Squid Game" (Witty + Scene Directions)</summary>
         <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Long-form YouTube essay script that uses pop culture framework to teach marketing principles. Built for retention through pattern interrupts, comedic timing, and clear b-roll instructions.
+          </p>
           <div class="script">
             <div class="meta">
               <span class="badge">Format: YouTube essay</span>
@@ -3007,8 +3014,11 @@ Let’s turn your passion into a thriving business.</pre>
     
       <!-- Script 2 -->
       <details id="yt-script-2">
-        <summary>Script 2 — “6 Mistakes New Language Learners Must Avoid” (Educational authority tone)</summary>
+        <summary>YouTube Script — "6 Mistakes New Language Learners Must Avoid" (Educational Authority Tone)</summary>
         <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Educational YouTube script that positions expertise through mistake-avoidance framework. Uses authority-driven tone with clear structure and actionable takeaways.
+          </p>
           <div class="script">
             <div class="meta">
               <span class="badge">Format: Educational</span>
@@ -3079,24 +3089,17 @@ Let’s turn your passion into a thriving business.</pre>
         Examples shown as excerpts for scannability.
       </p>
 
-      <nav class="toc" aria-label="Webinar examples">
-        <a href="#webinar-pre">Pre-webinar emails</a>
-        <a href="#webinar-script">Webinar script</a>
-        <a href="#webinar-post">Post-webinar emails</a>
-      </nav>
     </div>
 
-    <div class="mini-cta">
-      <a class="btn secondary"
-         href="#emails"
-         >Jump to Email samples →</a>
-    </div>
   </div>
 
   <!-- Pre-webinar sequence -->
-  <details id="webinar-pre" open>
-    <summary>Pre-Webinar Hype Sequence (7 emails) — YouTube Automation coach</summary>
+  <details id="webinar-pre">
+    <summary>Pre-Webinar Sequence — YouTube Automation Coach (7 Emails)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Multi-touch email sequence designed to maximize webinar show-up rate. Escalates urgency, handles objections, and increases live attendance through "live-only" bonuses and strategic timing.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Asset: Email sequence</span>
@@ -3146,8 +3149,11 @@ Angle: Direct “join now” link + chat prompt</pre>
 
   <!-- Webinar script -->
   <details id="webinar-script">
-    <summary>Sample Webinar Script — YouTube growth coach (VCP framework, live chat engagement)</summary>
+    <summary>Webinar Script — YouTube Growth Coach (VCP Framework, Live Chat Engagement)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Live webinar script structured around the VCP framework with strategic chat engagement prompts. Designed to maintain attention and create micro-commitments leading into the offer.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Asset: Live script</span>
@@ -3200,8 +3206,11 @@ Final CTA: apply via link</pre>
 
   <!-- Post-webinar sequence -->
   <details id="webinar-post">
-    <summary>Post-Webinar Sequence (6 emails) — Replay + conversion to mentorship</summary>
+    <summary>Post-Webinar Sequence — YouTube Growth Coach (6 Emails)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Post-webinar email sequence designed to convert attendees who didn't buy live. Combines replay access with continued value delivery and conversion-focused messaging.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Asset: Email sequence</span>
@@ -3253,18 +3262,8 @@ CTA: Apply / build empire</pre>
 
 
 
-  <section class="card pad" id="conversion-offers" style="margin-top:18px;">
-    <h2>Conversion & Offers</h2>
-    <p class="muted">Coming next: landing pages, sales pages, product descriptions, website copy.</p>
-    <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View page work →</a>
-  </section>
-
   <!-- =========================
-     DROP-IN UPDATE (Landing Pages):
-     Add this NEW section to portfolio.html
-     Recommended placement:
-       - right after your "Landing & Sales Pages" card
-       - or as its own card near Ads/Email.
+     Landing Pages Section
      ========================= -->
 
 <section class="card pad" id="landing-pages" style="margin-top:18px;">
@@ -3276,27 +3275,17 @@ CTA: Apply / build empire</pre>
         Examples below are shown as excerpts for scannability.
       </p>
 
-      <nav class="toc" aria-label="Landing page subcategories">
-        <a href="#lp-book-a-call">Book-a-Call</a>
-        <a href="#lp-opt-in">Opt-In</a>
-        <a href="#lp-advertorial">Pre-sell / Advertorial</a>
-        <a href="#lp-product">Product Page</a>
-        <a href="#lp-webinar">Webinar Page</a>
-        <a href="#lp-pt-opt-in">PT Opt-In</a>
-      </nav>
     </div>
 
-    <div class="mini-cta">
-      <a class="btn secondary"
-         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
-         target="_blank" rel="noopener">View full context →</a>
-    </div>
   </div>
 
   <!-- Book-a-call -->
-  <details id="lp-book-a-call" open>
-    <summary>Book-a-Call Page — Graphic designers (coaching / mastermind)</summary>
+  <details id="lp-book-a-call">
+    <summary>Landing Page — Book-a-Call (Graphic Designers, Coaching/Mastermind)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Book-a-call landing page built around the PAS (Problem-Agitate-Solve) framework. Uses origin story, proprietary method, and clear framework to position expertise and drive applications.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Type: Book-a-call</span>
@@ -3354,8 +3343,11 @@ Answer: ...there are no refunds.</pre>
 
   <!-- Opt-in page -->
   <details id="lp-opt-in">
-    <summary>Opt-In Page — Sports card trading guide (side hustle)</summary>
+    <summary>Landing Page — Opt-In (Sports Card Trading Guide, Side Hustle)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Lead magnet opt-in page designed to capture email addresses through a high-value free guide. Uses big promise, benefit bullets, and scarcity to drive conversions.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Type: Opt-in</span>
@@ -3383,8 +3375,11 @@ Our webinar software only allows up to 500 spots...</pre>
 
   <!-- Pre-sell / advertorial -->
   <details id="lp-advertorial">
-    <summary>Pre-sell / Advertorial — Nootropic supplement (science-led)</summary>
+    <summary>Landing Page — Pre-Sell/Advertorial (Nootropic Supplement, Science-Led)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Advertorial-style landing page that uses scientific explanation and mechanism to build credibility. Designed to educate before selling, with clear problem-to-solution flow.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Type: Advertorial</span>
@@ -3415,8 +3410,11 @@ Click the link below to watch a quick video to learn more.</pre>
 
   <!-- Product page -->
   <details id="lp-product">
-    <summary>Product Page — 3D contour mulberry silk sleep mask (benefit-led)</summary>
+    <summary>Landing Page — Product Page (3D Contour Mulberry Silk Sleep Mask, Benefit-Led)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Product-focused landing page that emphasizes benefits over features. Uses premium positioning, clear differentiation, and emotional benefits to drive conversions.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Type: Product page</span>
@@ -3448,8 +3446,11 @@ The Sunday Silks 3D Contour Sleep Mask is more than a sleep aid...</pre>
 
   <!-- Webinar page -->
   <details id="lp-webinar">
-    <summary>Webinar Registration Page — YouTube automation (AI-led)</summary>
+    <summary>Landing Page — Webinar Registration (YouTube Automation, AI-Led)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Webinar registration page designed to maximize sign-ups through clear value proposition, benefit bullets, and scarcity messaging. Focus on results-driven positioning.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Type: Webinar reg</span>
@@ -3478,8 +3479,11 @@ Zoom only allows up to 500 spots...</pre>
 
   <!-- PT opt-in page -->
   <details id="lp-pt-opt-in">
-    <summary>PT Opt-In Page — Runners mobility drills (lead magnet)</summary>
+    <summary>Landing Page — Opt-In (Runners Mobility Drills, Lead Magnet)</summary>
     <div class="detail-body">
+      <p class="muted" style="margin:0 0 10px;">
+        Lead magnet opt-in page targeting runners with a specific pain point. Uses problem framing, mechanism explanation, and clear value delivery to capture leads.
+      </p>
       <div class="script">
         <div class="meta">
           <span class="badge">Type: Opt-in</span>
@@ -3516,38 +3520,6 @@ Enter your name and email, and I’ll send it to you right away.</pre>
 </section>
 
 
-  <section class="card pad" id="longform" style="margin-top:18px;">
-    <h2>Long-Form Persuasion</h2>
-    <p class="muted">Coming next: VSLs, webinars, longer scripts.</p>
-    <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View long-form →</a>
-  </section>
-
-  <section class="card pad" id="authority" style="margin-top:18px;">
-    <h2>Authority Content</h2>
-    <p class="muted">Coming next: LinkedIn posts, organic reels, captions.</p>
-    <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View authority content →</a>
-  </section>
-
-  <!-- RESULTS -->
-  <section class="card pad" style="margin-top:18px;">
-    <h2>Selected Results</h2>
-    <p class="muted">Highlights from recent work.</p>
-
-    <div class="results" style="margin-top:18px;">
-      <div class="stat">
-        <strong>50+ ads/week</strong>
-        <span>Short-form + VSL scripts for a 9-figure eCom brand</span>
-      </div>
-      <div class="stat">
-        <strong>4.92% CTR</strong>
-        <span>Meta ad performance at scale (sample campaign set)</span>
-      </div>
-      <div class="stat">
-        <strong>561% spike</strong>
-        <span>Jewelry sales lift during Black Friday vs baseline (client-reported)</span>
-      </div>
-    </div>
-  </section>
 
   <footer style="margin-top:40px;">
     © <span id="y"></span> Arvind Manohar. Built for clarity and conversion.
@@ -3556,6 +3528,38 @@ Enter your name and email, and I’ll send it to you right away.</pre>
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
+  
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.links');
+  
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+      }
+    });
+    
+    // Close menu when clicking a link
+    const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
+      });
+    });
+  }
 </script>
 </body>
 </html>
