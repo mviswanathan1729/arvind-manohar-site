@@ -276,4 +276,19 @@ footer{
   .portfolio{grid-template-columns:1fr}
   h1{font-size:28px}
 }
+/* Product Page (PDP) helpers */
+.pdp-title { margin: 0 0 6px; }
+.pdp-subhead { margin: 0 0 14px; }
+.pdp-bullets { margin: 12px 0 0; padding-left: 18px; }
+.pdp-bullets li { margin: 8px 0; }
 
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 860px){
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+}
+
+.checklist { margin: 10px 0 0; padding-left: 18px; }
+.checklist li { margin: 8px 0; }
+
+.pdp-section { margin-top: 18px; }
+.pdp-cta { margin-top: 14px; }
