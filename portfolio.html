@@ -3,9 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Portfolio — Arvind Manohar. Performance copywriting examples for eCommerce brands." />
+  <meta name="description" content="Portfolio — Arvind Manohar. Performance copywriting examples organized by business outcome." />
   <title>Portfolio — Arvind Manohar</title>
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Page-specific additions for portfolio content -->
+  <style>
+    /* Keep these minimal; you can move into styles.css later */
+
+    .pillbar{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .pill{
+      font-size:13px; color:var(--muted);
+      padding:8px 10px; border:1px solid var(--line);
+      border-radius:999px; background:rgba(255,255,255,.03);
+      text-decoration:none;
+    }
+    .pill:hover{color:var(--text); border-color:rgba(106,167,255,.45)}
+
+    .section-head{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap}
+    .mini-cta{display:flex; gap:10px; flex-wrap:wrap}
+
+    .subgrid{display:grid; grid-template-columns:1fr; gap:10px; margin-top:12px}
+
+    details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.02);
+      padding:12px 14px;
+    }
+    summary{cursor:pointer; font-weight:700}
+    summary::-webkit-details-marker{display:none}
+
+    .detail-body{margin-top:10px; color:var(--muted); font-size:13px}
+
+    /* Script formatting */
+    .script{
+      margin-top:10px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      padding:14px 14px;
+    }
+    .script h4{margin:0 0 8px; font-size:14px}
+    .meta{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .badge{
+      display:inline-flex; align-items:center;
+      padding:6px 8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.02);
+    }
+    .copy{
+      white-space:pre-wrap;
+      margin:0;
+      color:var(--text);
+      font-size:13px;
+      line-height:1.6;
+    }
+    .note{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:10px;
+    }
+    .toc{
+      margin-top:12px;
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .toc a{
+      font-size:13px;
+      color:var(--muted);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    .toc a:hover{color:var(--text); border-color:rgba(106,167,255,.45)}
+  </style>
 </head>
 <body>
 
@@ -52,43 +131,3404 @@
 </header>
 
 <main class="wrap">
+
+  <!-- INTRO -->
   <section class="card pad" style="margin-top:28px;">
     <h1>Portfolio</h1>
-    <p class="muted" style="margin-bottom:24px;">
-      A collection of copywriting work across paid ads, email marketing, and landing pages.
-      Full examples and context are available in the detailed portfolio.
+    <p class="muted" style="margin-bottom:10px;">
+      Organized by <strong>business outcome</strong> so hiring managers and founders can quickly find what they need.
+      Full examples and additional context are available in the detailed portfolio.
     </p>
-    
-    <div style="margin-top:24px;">
+
+    <div class="pillbar" aria-label="Portfolio quick links">
+      <a class="pill" href="#paid-acq">Paid Acquisition</a>
+      <a class="pill" href="#email-lifecycle">Email & Lifecycle Revenue</a>
+      <a class="pill" href="#conversion-offers">Conversion & Offers</a>
+      <a class="pill" href="#longform">Long-Form Persuasion</a>
+      <a class="pill" href="#authority">Authority Content</a>
+    </div>
+
+    <div style="margin-top:18px;" class="mini-cta">
       <a class="btn primary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">
         View Full Portfolio on Notion →
       </a>
+      <a class="btn secondary" href="contact.html">Contact →</a>
     </div>
+
+    <p class="note">
+      Some work is under NDA. Where needed, examples are shared as redacted excerpts, anonymized drafts, or structure/framework breakdowns.
+    </p>
   </section>
 
-  <section class="card pad" style="margin-top:18px;">
-    <h2>Portfolio Categories</h2>
-    <p class="muted">Examples across different channels and formats.</p>
+  <!-- 1) PAID ACQUISITION -->
+  <section class="card pad" id="paid-acq" style="margin-top:18px;">
+    <div class="section-head">
+      <div>
+        <h2>Paid Acquisition</h2>
+        <p class="muted">Ads and scripts built for testing, iteration, and scale.</p>
 
-    <div class="portfolio" style="margin-top:18px;">
-      <div class="tile">
-        <strong>Paid Ads (Meta / UGC / VSL)</strong>
-        <p>Hooks, angles, scripts, and iterations built for testing and scale. Experience with high-spend campaigns managing $200K+/day in ad spend.</p>
-        <a href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View examples →</a>
+        <!-- Sub-category TOC inside Paid Acquisition -->
+        <nav class="toc" aria-label="Paid acquisition subcategories">
+          <a href="#meta-ads">Meta Ads</a>
+          <a href="#youtube-ads">YouTube Ads</a>
+          <a href="#meta-variations">Meta Variations (9-figure brand)</a>
+          <a href="#ugc-briefs">UGC Ads & Creator Briefs</a>
+          <a href="#beauty-ecom-meta">Beauty eCom Meta Ads</a>
+          <a href="#supplement-ecom">Supplement eCom Ads</a>
+        </nav>
       </div>
-      <div class="tile">
-        <strong>Email Sequences</strong>
-        <p>Promos, welcome flows, lifecycle, and seasonal campaigns. Copy designed to drive opens, clicks, and conversions.</p>
-        <a href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View examples →</a>
-      </div>
-      <div class="tile">
-        <strong>Landing & Sales Pages</strong>
-        <p>Lead magnets, product pages, book-a-call, and offer pages. Conversion-focused copy that guides visitors to action.</p>
-        <a href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View examples →</a>
+      <div class="mini-cta">
+        <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View more →</a>
       </div>
     </div>
+
+    <!-- META ADS -->
+    <details id="meta-ads" open>
+      <summary>Meta Ads — Scripts (AI Automation Coach, 7-figure)</summary>
+      <div class="detail-body">
+        <p class="muted" style="margin:0 0 10px;">
+          Short-form scripts written for a 7-figure social media AI automation coach. Emphasis on hook clarity, identity-driven positioning, and direct-response CTAs.
+        </p>
+
+        <div class="script" id="meta-ad-script-1">
+          <h4>Ad Script 1</h4>
+          <div class="meta">
+            <span class="badge">Channel: Meta</span>
+            <span class="badge">Format: Short-form video script</span>
+            <span class="badge">Client: AI automation coach (7-figure)</span>
+          </div>
+          <pre class="copy">Most women are living their lives wrong…
+
+You see:
+
+There’s a reason why there are 14-year-olds making thousands each day,
+
+While you’re making less than $10k/mo while working long hours at your day jobs.
+
+It’s because these young children have discovered something that most adults will never realize…
+
+The internet gives everyone an equal chance to make money online no matter where you are in life.
+
+For example,
+
+English isn’t my first language,
+
+I dropped out of college in my second year,
+
+And I’m a woman.
+
+But despite this,
+
+I was able to start a side hustle that profits 7 figures each year.
+
+I call it the “Automated Income AI System”,
+
+And it works by creating and selling your own digital products online.
+
+Now, if you’re still watching this Ad,
+
+You’re probably serious about making a lot of girl money online.
+
+So at this point,
+
+You need to make a decision.
+
+You can either go to college for 4 years just to work at a 9-5 you’re probably going to hate.
+
+OR
+
+Hustle for 2 years to make a 7-figure income working 3 hours per day.
+
+If you chose the second option,
+
+My 5-step roadmap to build an “Automated Income AI System” will help you achieve those goals.
+
+It has all the information I wish I had when first starting this side hustle.
+
+It guides you through the entire process, from choosing the best niche to marketing your products well.
+
+With this guide, you’ll know how to finally quit your 9-5 and get the attention and money you deserve.
+
+If you’d like access to the blueprint,
+
+Click the ‘Learn More’ button below to start your passive income journey!</pre>
+        </div>
+
+        <div class="script" id="meta-ad-script-2">
+          <h4>Ad Script 2</h4>
+          <div class="meta">
+            <span class="badge">Channel: Meta</span>
+            <span class="badge">Format: Short-form video script</span>
+            <span class="badge">Client: AI automation coach (7-figure)</span>
+          </div>
+          <pre class="copy">Attention hardworking women…
+
+Are you tired of working at your unfulfilling 9-5 job?
+
+Taking on extra projects, working unpaid overtime, not using your vacation days,
+
+But despite all that hard work you’re putting in,
+
+You’re not getting the credit or pay that you deserve.
+
+If you feel like this,
+
+Then I can help you out.
+
+My name’s Hannah,
+
+And I help women make an extra $1k+/day in passive income with just a lunch break's worth of work,
+
+So they can finally start living their best girly lives.
+
+With the AI business model that I teach,
+
+I’ve generated over seven figures in profit over the last two years.
+
+With that extra money and freedom,
+
+I’ve been able to move to Dubai, travel to over 20 countries, and see my friends almost every day.
+
+And now, I want to help you do the same.
+
+That’s why I’m giving you a 5-step income system roadmap.
+
+It guides you through the entire process, from choosing the best niche to marketing your products well.
+
+With this guide, you’ll know how to finally quit your 9-5 and get the attention and money you deserve.
+
+If you’d like access to the blueprint,
+
+Click the ‘Learn More’ button below to start your passive income journey!</pre>
+        </div>
+
+        <div class="script" id="meta-ad-script-3">
+          <h4>Ad Script 3</h4>
+          <div class="meta">
+            <span class="badge">Channel: Meta</span>
+            <span class="badge">Format: Short-form video script</span>
+            <span class="badge">Client: AI automation coach (7-figure)</span>
+          </div>
+          <pre class="copy">[Hannah driving a Lamborghini]
+
+‘I’m so happy another man bought me this car.
+
+I could never buy a car like this because I’ve never worked a day in my life.’
+
+Many people believe this is what I’m thinking each day,
+
+But it’s not true.
+
+I bought all my cars, houses, and luxury trips with my hard-earned money.
+
+How?
+
+Well, I used to work at a 9-5 while only making $6k/mo,
+
+But started a unique side hustle a little under 2 years ago,
+
+And I’ve scaled it to make me over $100k/mo.
+
+And no,
+
+I didn’t start a clothing brand or become an affiliate marketer,
+
+And I never had to take off a single piece of clothing.
+
+This side hustle is called AI income automation,
+
+And you create and sell your own digital products.
+
+This means you’ll never have to worry about stocking inventory or having good profit margins.
+
+And with the help of AI,
+
+90% of the process is automated,
+
+So you can make all this money while barely working 2 hours per day.
+
+So how can you get started?
+
+Well, it took me 6 months to start making $30k/mo,
+
+But I’ve seen people scale to that income in just 3 months.
+
+To help you make $1k/mo+ in passive income in as little time as possible,
+
+I created a 5-step income system roadmap.
+
+It guides you through the entire process, from choosing the best niche to marketing your products well.
+
+With this guide, you’ll know how to finally quit your 9-5 and get the attention and money you deserve.
+
+If you’d like access to the blueprint,
+
+Click the ‘Learn More’ button below to start your passive income journey!</pre>
+        </div>
+
+        <p class="note">Note: Names and identifying details may be anonymized.</p>
+      </div>
+    </details>
+
+    <!-- YOUTUBE ADS -->
+    <details id="youtube-ads">
+      <summary>YouTube Ads — Scripts (Fitness Business Coach, 8-figure)</summary>
+      <div class="detail-body">
+        <p class="muted" style="margin:0 0 10px;">
+          YouTube ad scripts written for an 8-figure fitness business coach. Emphasis on clear mechanism, proof, and “book a call” CTA.
+        </p>
+
+        <div class="script" id="yt-ad-script-1">
+          <h4>Ad Script 1</h4>
+          <div class="meta">
+            <span class="badge">Channel: YouTube</span>
+            <span class="badge">Client: Fitness business coach (8-figure)</span>
+            <span class="badge">Offer: “AR Funnel”</span>
+          </div>
+          <pre class="copy">Attention fitness coaches…
+
+If you’re struggling to find qualified leads,
+
+Then this funnel might be one of the best solutions going into 2025.
+
+It’s called the “AR” funnel.
+
+And it has helped over 500 fitness coaches make an additional $20k/mo from the extra customers.
+
+The funnel works by attracting ready-to-buy leads for your business,
+
+And ultimately get a recurring subscription so large that you may not need to run Ads to make money.
+
+Best of all, it’s a fully automatic done-for-you funnel that can be installed for just a one-time payment.
+
+If you’d like our help to install the “AR” funnel into your fitness business to help you attract more qualified leads,
+
+Click the ‘Learn More’ button below to see if we’re a good fit for each other.
+
+This is the perfect opportunity going into the New Year.
+
+More people are setting fitness goals,
+
+Deciding to finally get in shape,
+
+And looking into buying fitness programs.
+
+So this is the best time to optimize your lead-generation system.
+
+No other time in the year has more people looking to invest in fitness coaches than now.
+
+So don’t miss out on the value this funnel can provide.
+
+Click on the ‘Learn More’ button to attract more ready-to-buy leads.</pre>
+        </div>
+
+        <div class="script" id="yt-ad-script-2">
+          <h4>Ad Script 2</h4>
+          <div class="meta">
+            <span class="badge">Channel: YouTube</span>
+            <span class="badge">Client: Fitness business coach (8-figure)</span>
+            <span class="badge">Angle: Referral system</span>
+          </div>
+          <pre class="copy">If you’re a fitness coach looking to make more money,
+
+Then this video is for you.
+
+There’s a system fitness coaches are using to make 10-20% more revenue each month.
+
+And they don’t need to search for new leads,
+
+Increase their prices,
+
+Or buy premade lead lists.
+
+In fact, once this system is installed in a fitness business,
+
+The owner can generate income without even lifting a finger.
+
+And that is…
+
+A referral system.
+
+Yes, this is what thousands of personal trainers are currently sleeping on.
+
+Think about it…
+
+You trust your friends and family,
+
+So if they recommend a personal trainer,
+
+You’ll take their word for it because you know they have good intentions for you.
+
+These referrals are more often qualified leads ready to invest in themselves.
+
+A referral system can create additional revenue while having low maintenance.
+
+And that’s why I made it the main priority to include in my “AR” funnel.
+
+It’s a fully DFY sales funnel to not only attract more qualified leads,
+
+But it also includes a referral system to potentially increase your MRR by 10-20%.
+
+You can get all this for a one-time payment.
+
+So if you’re ready to see if the “AR” funnel is a right fit based on your specific business,
+
+Click the ‘Learn More’ button below to book a call with my team.
+
+On the call,
+
+We’ll analyze your business’s current situation,
+
+Give you advice to scale based on where you’re at,
+
+And see if the “AR” funnel and its referral system are the perfect fit for you.</pre>
+        </div>
+
+        <div class="script" id="yt-ad-script-3">
+          <h4>Ad Script 3</h4>
+          <div class="meta">
+            <span class="badge">Channel: YouTube</span>
+            <span class="badge">Client: Fitness business coach (8-figure)</span>
+            <span class="badge">Angle: Failure rate + solution</span>
+          </div>
+          <pre class="copy">Did you know that 80% of fitness businesses fail in the first 2 years?
+
+This usually happens for 3 main reasons:
+
+The brands are running ads that barely break even,
+
+The business is struggling to find leads who actually want to invest in their services,
+
+And they rely on cold outreach and inconsistent ad campaigns to survive.
+
+But what if you didn’t have to?
+
+What if you could consistently attract high-paying clients without spending a dime on ads?
+
+That’s where the “AR” funnel comes in.
+
+For just a one-time payment,
+
+This done-for-you system is designed not only to bring in qualified leads,
+
+But also to create a referral network that grows your revenue every single month.
+
+Think about it…
+
+People are more likely to listen to those whom they know, like, and trust.
+
+For this reason,
+
+Acquiring leads through references is much easier than targeting strangers on the internet.
+
+This makes these referral leads easier to close,
+
+More likely to stick around,
+
+And they don’t cost you anything to acquire.
+
+The best part?
+
+The “AR” funnel automates the entire process,
+
+So it takes care of the entire system once installed.
+
+The funnel has already helped over 500 fitness coaches make an extra $20k/mo,
+
+And it may be able to help you too.
+
+If you’re ready to take control of your business and start generating revenue with a system that works 24/7…
+
+Click the ‘Learn More’ button below to book a call with my team.
+
+We’ll analyze your business, give you a strategy to scale, and see if the “AR” funnel is the perfect fit for you.
+
+Don’t let this opportunity slip away.
+
+Click ‘Learn More’ now and let’s take your business to the next level.</pre>
+        </div>
+      </div>
+    </details>
+
+    <!-- META VARIATIONS (Hair loss brand) -->
+    <details id="meta-variations">
+      <summary>Meta Variations — 5 Samples (Hair Loss Brand, 9-figure)</summary>
+      <div class="detail-body">
+        <p class="muted" style="margin:0 0 10px;">
+          Five ad variations built from a single core mechanism (early intervention), with distinct hooks and story approaches.
+        </p>
+        <p class="note">To keep this page scannable, you can paste Ad #1–#5 here later or link to the Notion section.</p>
+        <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View variations in full →</a>
+      </div>
+    </details>
+
+    <!-- UGC BRIEFS -->
+    <details id="ugc-briefs">
+      <summary>UGC Ads & Creator Briefs (Cat Litter Brand, 7-figure)</summary>
+      <div class="detail-body">
+        <p class="muted" style="margin:0 0 10px;">
+          Creator-style scripts with scene direction, on-screen text, and beat-by-beat structure.
+        </p>
+        <p class="note">To keep this page lightweight, consider placing Script 1–3 on separate sub-pages, or keep just one full script here.</p>
+        <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View briefs in full →</a>
+      </div>
+    </details>
+
+    <!-- BEAUTY ECOM META ADS -->
+    <details id="beauty-ecom-meta">
+      <summary>Beauty eCom Meta Ads (Men’s Beauty Brand, 8-figure)</summary>
+      <div class="detail-body">
+        <p class="muted" style="margin:0 0 10px;">
+          Meta ad scripts designed around a common pain point + humor-based angle variation.
+        </p>
+        <p class="note">Paste the primary script + the bonus angle here later (or link out).</p>
+        <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View in full →</a>
+      </div>
+    </details>
+
+    <!-- SUPPLEMENT ECOM ADS -->
+    <details id="supplement-ecom">
+      <summary>Supplement eCom Ads (8-figure brands)</summary>
+      <div class="detail-body">
+        <p class="muted" style="margin:0 0 10px;">
+          Long-form VSL concept + short-form ad with clear avatar, mass desire, and testing rationale.
+        </p>
+        <p class="note">The full VSL is long — recommend hosting it as a separate page or linking to Notion for readability.</p>
+        <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View in full →</a>
+      </div>
+    </details>
+
   </section>
 
+  <!-- Other major sections remain as placeholders for now -->
+
+     <section class="card pad" id="email-lifecycle" style="margin-top:18px;">
+      <div class="section-head">
+        <div>
+          <h2>Email & Lifecycle Revenue</h2>
+          <p class="muted">Lifecycle sequences designed to turn subscribers into customers (and customers into repeat buyers).</p>
+    
+          <!-- Sub-category TOC inside Email -->
+          <nav class="toc" aria-label="Email subcategories">
+            <a href="#welcome-seq">Welcome Sequence</a>
+            <a href="#promo-seq">Promo Sequence</a>
+            <a href="#abandoned-cart">Abandoned Cart</a>
+          </nav>
+        </div>
+        <div class="mini-cta">
+          <a class="btn secondary"
+             href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+             target="_blank" rel="noopener">View more →</a>
+        </div>
+      </div>
+    
+      <!-- WELCOME SEQUENCE -->
+      <details id="welcome-seq" open>
+        <summary>eCom Welcome Sequence (Pet eCom Brand, 8-figure)</summary>
+        <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Goal: onboard new subscribers, build trust fast, and drive first purchase with a time-bound offer.
+          </p>
+    
+          <div class="script" id="welcome-email-1">
+            <h4>Email #1 — Welcome + $20 offer</h4>
+            <div class="meta">
+              <span class="badge">Flow: Welcome</span>
+              <span class="badge">Client: Pet eCom (8-figure)</span>
+              <span class="badge">Trigger: New subscriber</span>
+            </div>
+            <pre class="copy">Subject line: Welcome to &lt;brand name&gt;!
+    Preview Text: Here’s $20 off your next order
+    
+    Hi %FIRSTNAME%,
+    
+    Welcome to &lt;brand name&gt;,
+    
+    Where we stick by your side through all the highs and lows of pet parenting.
+    
+    We’re so happy you’re here with us.
+    
+    Our mission is simple:
+    
+    We aim to be the most trusted and convenient destination for pet parents everywhere.
+    
+    That’s why we have high-quality products at low prices,
+    
+    Fast 1-3 day shipping,
+    
+    Free returns if you and your pet aren’t 100% satisfied with your order,
+    
+    And 24/7 support if you have any questions.
+    
+    To thank you for choosing to join us today,
+    
+    We’re giving you a special discount.
+    
+    If you make an order above $49,
+    
+    Use the code “WELCOME” at checkout for $20 off plus FREE shipping.
+    
+    But hurry…
+    
+    The discount expires in 7 days.
+    
+    Click here to claim your gift.
+    
+    Speak soon,
+    
+    &lt;brand name&gt;.</pre>
+          </div>
+    
+          <div class="script" id="welcome-email-2">
+            <h4>Email #2 — Trust + breadth of catalog</h4>
+            <div class="meta">
+              <span class="badge">Flow: Welcome</span>
+              <span class="badge">Angle: Convenience + support</span>
+            </div>
+            <pre class="copy">Subject line: How to get the best pet care possible
+    Preview Text: -
+    
+    %FIRSTNAME%,
+    
+    Being a pet parent can be stressful at times,
+    
+    Especially when it comes to finding all the products you need.
+    
+    That’s why at &lt;brand name&gt;,
+    
+    We provide everything you’ll need to take care of your pet.
+    
+    From food, clothing, and accessories,
+    
+    All the way to live vet help, prescriptions, and insurance,
+    
+    We work with over 3500 brands to provide you with everything you need.
+    
+    If you need help with anything,
+    
+    We’re here for you 24/7.
+    
+    We’re just a call, chat, email, or social media message away from helping you find the best products for the lowest prices.
+    
+    We also have a 100% satisfaction guarantee on every order,
+    
+    So if you and your pet don’t love one of our products,
+    
+    You can return it or replace it.
+    
+    If you don’t know where to start.
+    
+    Click here to check out today’s special deals.</pre>
+          </div>
+    
+          <div class="script" id="welcome-email-3">
+            <h4>Email #3 — Product spotlight</h4>
+            <div class="meta">
+              <span class="badge">Flow: Welcome</span>
+              <span class="badge">Angle: Best-seller</span>
+            </div>
+            <pre class="copy">Subject line: Get the Most Out of the Lamb Chop Squeaky Dog Toy
+    Preview Text: -
+    
+    Hey %FIRSTNAME%,
+    
+    If you’re looking for a dog toy,
+    
+    Then the Multipet Lamb Chop Squeaky Plush Dog Toy might be your best option.
+    
+    It comes in 3 sizes: mini, regular, and Jumbo,
+    
+    So you can get the best size for your specific dog.
+    
+    The internal squeaker makes the toy irresistible for any dog that likes to chew.
+    
+    And if your companion doesn’t feel like chewing?
+    
+    The fun isn’t done because the polyester fabric and cotton filling make the incredibly plush lamb perfect for cuddling.
+    
+    And the best part?
+    
+    The toy has no removable parts, no scents, and is easily washable.
+    
+    Dogs around the world of all sizes and personalities love this,
+    
+    Making it our best-selling dog toy.
+    
+    You can currently get it for 44% off.
+    
+    Click here to shop for your pup’s new favorite toy.</pre>
+          </div>
+    
+          <div class="script" id="welcome-email-4">
+            <h4>Email #4 — Coupon urgency (24 hours)</h4>
+            <div class="meta">
+              <span class="badge">Flow: Welcome</span>
+              <span class="badge">Angle: Urgency</span>
+            </div>
+            <pre class="copy">Subject line: Your $20 coupon expires soon!
+    Preview Text: -
+    
+    Hurry %FIRSTNAME%,
+    
+    Your discount expires in 24 hours.
+    
+    We have a wide selection of products for your pet.
+    
+    If you plan on watching the Superbowl with your companion,
+    
+    Feel free to check out our selections of crewnecks and bandanas for your dog or cat.
+    
+    If you’re interested in getting a toy for your pet,
+    
+    You can check out our bestseller dog toy:
+    
+    The Squeaky Plush Lamb Toy.
+    
+    For every order above $49,
+    
+    Use the code “WELCOME” at checkout for $20 off plus FREE shipping.
+    
+    Click here to use your discount before it’s gone.</pre>
+          </div>
+    
+          <div class="script" id="welcome-email-5">
+            <h4>Email #5 — VIP / Social community</h4>
+            <div class="meta">
+              <span class="badge">Flow: Welcome</span>
+              <span class="badge">Angle: Community + perks</span>
+            </div>
+            <pre class="copy">Subject line: %FIRSTNAME%’s special rewards
+    Preview Text: -
+    
+    %FIRSTNAME%,
+    
+    Thank you so much for being a loyal subscriber over the past few days.
+    
+    To show our gratitude, we’d like to invite you to join our VIP group.
+    
+    You get many perks if you follow us on social media such as…
+    
+    Special discounts,
+    Early product launches,
+    Exclusive behind-the-scenes content,
+    
+    And so much more!
+    
+    As a bonus,
+    
+    If you post a photo or video with your pet and use the hashtag #&lt;brandname&gt;VIP,
+    
+    We’ll feature you on our page and give you a special gift!
+    
+    Click below to follow us on social media.
+    FB   YT    IG   TIKTOK</pre>
+          </div>
+    
+          <div class="script" id="welcome-email-6">
+            <h4>Email #6 — Cross-sell (vet care)</h4>
+            <div class="meta">
+              <span class="badge">Flow: Welcome</span>
+              <span class="badge">Angle: Service add-on</span>
+            </div>
+            <pre class="copy">Subject line: Here’s a gift for %FIRSTNAME%...
+    Preview Text: -
+    
+    Hey %FIRSTNAME%,
+    
+    &lt;Brand name&gt; doesn’t just sell pet products.
+    
+    We also have vet care that both you and your pet will love.
+    
+    We have offices in Atlanta, Denver, Austin, and Southern Florida,
+    
+    So if you live near those areas,
+    
+    You can make an appointment or just walk in.
+    
+    If you don’t live near our offices,
+    
+    You can schedule a virtual appointment with one of our experienced and friendly veterinarians.
+    
+    And best of all,
+    
+    If you become a member,
+    
+    You get access to:
+    
+    24/7 virtual health guidance,
+    Unlimited wellness, sick, and urgent care exams with no fee,
+    Priority scheduling to get care when your pet needs it most,
+    
+    And so much more!
+    
+    We currently have a special offer on our appointment bundles and membership plans.
+    
+    Click here to take advantage of the deal.</pre>
+          </div>
+    
+          <p class="note">Note: Brand/product placeholders are intentionally anonymized (&lt;brand name&gt;).</p>
+        </div>
+      </details>
+    
+      <!-- PROMO SEQUENCE -->
+      <details id="promo-seq">
+        <summary>eCom Promo Sequence (Jewelry Brand, 8-figure) — Black Friday</summary>
+        <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Goal: maximize conversion during peak buying window using urgency, product anchors, and offer clarity.
+          </p>
+    
+          <div class="script" id="promo-email-1">
+            <h4>Email #1 — Sale announcement</h4>
+            <div class="meta">
+              <span class="badge">Flow: Promo</span>
+              <span class="badge">Event: Black Friday</span>
+              <span class="badge">Offer: 50% off storewide</span>
+            </div>
+            <pre class="copy">Subject line: Hot jewelry at even hotter prices🔥
+    Preview Text: Now 50% off our entire store
+    
+    “It’s time %FIRSTNAME%...
+    
+    Join us for our Black Friday sale, where you can get beautiful gold-plated jewelry for just half the normal price.✨
+    
+    But the discount in price doesn’t mean a discount in quality,
+    
+    Being waterproof, sweatproof, and having a lifetime color guarantee,
+    
+    Our jewelry is just as durable and high-quality.
+    
+    It’s time to be thankful for good food, good vibes, and discounts on jewelry made to last.💫
+    
+    But hurry, the Black Friday sale ends on Friday, November 29.📿
+    
+    Start shining this Thanksgiving for 50% off!</pre>
+          </div>
+    
+          <div class="script" id="promo-email-2">
+            <h4>Email #2 — Friendsgiving angle</h4>
+            <div class="meta">
+              <span class="badge">Flow: Promo</span>
+              <span class="badge">Angle: Social gifting</span>
+            </div>
+            <pre class="copy">Subject line: The Black Friday countdown is on! ⏳
+    Preview Text: Time to define a lasting friendship
+    
+    %FIRSTNAME%, it’s that time of year again…
+    
+    Planning your outfits and food for Friendsgiving.
+    
+    To help you coordinate your clothes,
+    
+    We’re offering 50% off EVERYTHING in our store!
+    
+    Friendship looks better with matching rings, necklaces, or bracelets,
+    
+    So this Thanksgiving, treat yourself and your girlies to any of our pieces for half the normal price.
+    
+    But hurry, you only have 3 days to take advantage of this sale.
+    
+    Click here to shop Friendsgiving looks!</pre>
+          </div>
+    
+          <div class="script" id="promo-email-3">
+            <h4>Email #3 — Product anchors + urgency</h4>
+            <div class="meta">
+              <span class="badge">Flow: Promo</span>
+              <span class="badge">Angle: Product highlights</span>
+            </div>
+            <pre class="copy">Subject line: Your jewelry’s shine will last...✨
+    Preview Text: But these Black Friday deals won’t
+    
+    Nothing says holiday spirit like a little extra sparkle.✨
+    
+    So take advantage of our Black Friday sale while it lasts.
+    
+    For the next 2 days only,
+    
+    You can get half off all our selections!🙌
+    
+    Check out our bestselling Golden Goals necklace,
+    Natural Pearl Stud earrings,
+    Or our Gold Sunburst ring.
+    
+    From eating with family and friends to washing dishes after Thanksgiving,
+    
+    Your jewelry will shine bright in every moment.
+    
+    But hurry, the sale ends Friday, November 29.
+    
+    It’s now or never to take advantage of it. (we mean it).💫
+    
+    Click here to elevate your style.</pre>
+          </div>
+    
+          <div class="script" id="promo-email-4">
+            <h4>Email #4 — Last chance (24 hours)</h4>
+            <div class="meta">
+              <span class="badge">Flow: Promo</span>
+              <span class="badge">Angle: Last chance</span>
+            </div>
+            <pre class="copy">Subject line: 24 hours left %FIRSTNAME%...
+    Preview text: Last chance to save on beautiful jewelry📿
+    
+    There’s only one thing better than Thanksgiving leftovers…
+    
+    Affordable long-lasting jewelry!
+    
+    But time’s almost up!
+    
+    Your favorite Black Friday deals will disappear in 24 hours.
+    
+    This is your last chance to get half-price on the jewelry that shines through every shower, sweat session, and spontaneous night out.
+    
+    After Black Friday, all the jewelry will be back to full price.
+    
+    So don’t wait.
+    
+    Click here to take advantage of the HUGE discount while you can.</pre>
+          </div>
+        </div>
+      </details>
+    
+      <!-- ABANDONED CART -->
+      <details id="abandoned-cart">
+        <summary>Abandoned Cart Sequence (Luxury Clothing Brand, 8-figure)</summary>
+        <div class="detail-body">
+          <p class="muted" style="margin:0 0 10px;">
+            Goal: recover high-AOV carts by reducing friction, adding reassurance, and layering urgency + incentive.
+          </p>
+    
+          <p class="note">
+            This sequence is long (7 emails). To keep the page scannable, recommend:
+            (a) show Email #1–#3 here, and
+            (b) link “View the full sequence →” to Notion (or a dedicated subpage).
+          </p>
+    
+          <div class="script" id="cart-email-1">
+            <h4>Email #1 — Reassurance + risk reversal</h4>
+            <div class="meta">
+              <span class="badge">Flow: Abandoned Cart</span>
+              <span class="badge">Client: Luxury clothing (8-figure)</span>
+            </div>
+            <pre class="copy">Subject line: Your purchase isn’t complete…
+    Preview Text: -
+    
+    Hi %FIRSTNAME%,
+    
+    [Product image]
+    
+    We get it: buying a luxury dress may take a lot of thought.
+    
+    You may be asking yourself questions like:
+    
+    ‘What if I don’t like it?’
+    
+    ‘Will it fit me?’
+    
+    ‘What if I don’t need it anymore?’
+    
+    That’s why we have:
+    
+    The best prices based on your location so you can feel like a million bucks without breaking your wallet,
+    Free 3-5 business day shipping anywhere in the United States so you don’t have to wait forever for your dress,
+    A 30-day return policy so you can return the dress if it doesn’t fit or you don’t like it.
+    
+    Click here to go back to your cart.
+    
+    P.S. If you have any questions,
+    
+    You can check out our FAQ page.
+    
+    If you’re still unsure about anything,
+    
+    Reply to this email with the word “HELP” and we’ll be able to assist you.</pre>
+          </div>
+    
+          <div class="script" id="cart-email-2">
+            <h4>Email #2 — Social proof + scarcity</h4>
+            <div class="meta">
+              <span class="badge">Flow: Abandoned Cart</span>
+              <span class="badge">Angle: Rating + selling fast</span>
+            </div>
+            <pre class="copy">Subject line: You left something behind
+    Preview text: Action required…
+    
+    Hey %FIRSTNAME%,
+    
+    We noticed you were looking at the Oscar de la Renta Rose-Print Twill Maxi Dress.
+    
+    [Product image]
+    
+    With 4.7/5 stars,
+    
+    The Italian-made 97% cotton dress is a customer favorite.
+    
+    Because of this, it’s selling fast.
+    
+    There are many different sizes available,
+    
+    But once they all run out of stock,
+    
+    We don’t know when we’ll get more.
+    
+    It seems like you’ve left the dress in your cart,
+    
+    So click here to complete your order.
+    
+    P.S. If you have any questions,
+    
+    You can check out our FAQ page.
+    
+    If you’re still unsure about anything,
+    
+    Reply to this email with the word “HELP” and we’ll be able to assist you.</pre>
+          </div>
+    
+          <div class="script" id="cart-email-3">
+            <h4>Email #3 — Reminder + shipping reassurance</h4>
+            <div class="meta">
+              <span class="badge">Flow: Abandoned Cart</span>
+              <span class="badge">Angle: “Life happens”</span>
+            </div>
+            <pre class="copy">Subject line: Did you forget about {product}?
+    Preview Text: -
+    
+    We get it %FIRSTNAME%...
+    
+    [Product image]
+    
+    It seems like you were checking out the Oscar de la Renta Rose-Print Twill Maxi dress before,
+    
+    But it’s easy to forget about it.
+    
+    Life can be quite crazy at times.
+    
+    Maybe your friends texted you,
+    
+    Maybe a work email distracted you,
+    
+    Or maybe your dog started barking.
+    
+    Whatever the reason,
+    
+    The 4.7/5 rating makes this popular dress one of the customer favorites.
+    
+    And if you live in the United States,
+    
+    We’ll ship it to you in 3-5 business days for free.
+    
+    If you’re interested in buying the dress,
+    
+    Click here to continue shopping.
+    
+    P.S. If you have any questions,
+    
+    You can check out our FAQ page.
+    
+    If you’re still unsure about anything,
+    
+    Reply to this email with the word “HELP” and we’ll be able to assist you.</pre>
+          </div>
+    
+          <div style="margin-top:12px;" class="mini-cta">
+            <a class="btn secondary"
+               href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+               target="_blank" rel="noopener">View full abandoned cart sequence →</a>
+          </div>
+    
+        </div>
+      </details>
+    </section>
+    
+  <!-- =========================
+     DROP-IN UPDATE (Emails):
+     Add this NEW section anywhere on portfolio.html
+     (recommended: right after your "Email Sequences" section).
+     ========================= -->
+
+<section class="card pad" id="emails" style="margin-top:18px;">
+  <div class="section-head">
+    <div>
+      <h2>Emails</h2>
+      <p class="muted">
+        Standalone broadcasts and campaign emails across creators, coaches, and service brands.
+        Organized by intent: promo, value, urgency, testimonials, stories, and upsells.
+      </p>
+
+      <nav class="toc" aria-label="Emails subcategories">
+        <a href="#emails-promo">Promo</a>
+        <a href="#emails-value">Free Value</a>
+        <a href="#emails-urgency">Urgency</a>
+        <a href="#emails-testimonials">Testimonials</a>
+        <a href="#emails-stories">Story</a>
+        <a href="#emails-upsells">Upsell</a>
+      </nav>
+    </div>
+    <div class="mini-cta">
+      <a class="btn secondary"
+         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+         target="_blank" rel="noopener">View more →</a>
+    </div>
+  </div>
+
+  <!-- PROMO EMAILS -->
+  <details id="emails-promo" open>
+    <summary>Promo Emails</summary>
+    <div class="detail-body">
+      <div class="script" id="promo-email-1">
+        <h4>Promo Email #1 — Dating coach (8-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Promo</span>
+          <span class="badge">Client: Dating coach</span>
+          <span class="badge">Scale: 8-figure</span>
+        </div>
+        <pre class="copy">Subject Line: Here’s why you should date 4 women
+Preview Text: Not what you think…
+
+%FIRSTNAME%,
+
+If you’re not a modern sheik in today’s world,
+
+And you’re not dating at least 4 women at once…
+
+Then what are you doing?
+
+Now, I might sound like a misogynist when I say that,
+
+But hear me out.
+
+These 4 girlfriends that you have shouldn’t exist in real life,
+But rather your imagination.
+
+What do I mean by this?
+Acting like you're dating four girls will solve many of your needy problems.
+
+Think about it:
+If you were dating 4 women,
+Would you care if one of them didn’t text you back or cancelled plans at the last minute?
+Would it be a big deal if one of the relationships didn’t work out?
+
+Chances are you wouldn’t be too upset because you’d have other options.
+
+When you don’t put all your faith into one person,
+You’ll seem less needy and more confident,
+Which will make you more attractive to the woman you’re dating.
+
+So %FIRSTNAME%,
+Next time you feel a certain way about a girl,
+Then just ask yourself…
+‘Would I feel this way if I had 4 girlfriends?’
+
+If the answer is no,
+Then it means you’re being needy and need to change your behavior.
+
+Now, you may be wondering:
+‘This all sounds good,
+But what can I do not to act desperate?’
+
+Well, if that’s the case,
+I’ve taught hundreds of men the blueprint not to be needy.
+
+In 12 weeks, they’ve gone from struggling to attract women,
+To thrive in their romantic relationships.
+
+If you’d like access to this framework,
+Reply to this email with the word “FOUR”,
+And I’ll send it over to you.
+
+Your friend,
+&lt;name&gt;.</pre>
+      </div>
+
+      <div class="script" id="promo-email-2">
+        <h4>Promo Email #2 — Instagram monetization coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Promo</span>
+          <span class="badge">Client: IG monetization coach</span>
+          <span class="badge">Scale: 7-figure</span>
+        </div>
+        <pre class="copy">Subject Line: Ugly babies are preventing IG growth
+Preview Text: Here’s how…
+
+It’s true %FIRSTNAME%,
+The ugly baby concept is preventing IG growth.
+
+And it’s not for the reason you think.
+
+I know, the name might sound weird,
+But hear me out.
+
+The idea refers to when a creator thinks their work is high-quality,
+But a viewer thinks it’s terrible.
+
+It’s the same reason why a toddler thinks he drew the next Mona Lisa
+even though he just scribbled all over the paper.
+
+As creators,
+We know how much effort we put into the content,
+So we’re biased to thinking the reels are better than they actually are.
+
+This is why we may spend 5 hours creating a reel,
+Only for it to get 11 likes.
+
+Now %FIRSTNAME%,
+I’ve found that the best way to prevent this from happening…
+To have an expert to critique your content.
+
+Not only can they provide unbiased feedback,
+But they can also give advice on how to improve in the future.
+
+So despite the funny name,
+The ugly baby concept could be the reason your social media isn’t growing as fast as you’d like.
+
+And if you’d like access to an expert who can give you constant feedback,
+Click here to join my coaching program and grow your income on IG.
+
+See you inside,
+&lt;name&gt;.</pre>
+      </div>
+
+      <div class="script" id="promo-email-3">
+        <h4>Promo Email #3 — Dating coach (8-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Promo</span>
+          <span class="badge">Client: Dating coach</span>
+          <span class="badge">Scale: 8-figure</span>
+        </div>
+        <pre class="copy">Subject Line: The ONE conversation mistake men make
+Preview Text: Not what you think…
+
+Hey %FIRSTNAME%,
+
+It was December 25, 2006.
+I checked my mailbox and saw that I’d gotten a Christmas card from my dentist.
+
+The message read “Happy Holidays, brush twice a day, floss regularly!”
+
+Why am I telling you this?
+
+Many of your conversations with women are like my dentist's Christmas card:
+Boring, generic, and templated.
+
+Do you think you’ll create an unforgettable impression by saying…
+“I like your outfit.”
+“What do you do for work?”
+“The weather’s nice today.”
+
+The truth is…
+She’ll see you as just another random guy with no personality.
+
+That’s why when you speak to a woman,
+You should focus more on making her emotional.
+
+Crack a witty joke,
+Playfully tease her,
+You could even tell her she’s fatter than the sun.
+(Although I don’t recommend that 😂)
+
+So next time you speak to a woman,
+Don't be like my dentist's Christmas card.
+
+Invoke strong emotions,
+And she’ll get hooked to you.
+
+Now with all that being said,
+I have to make an important disclaimer…
+
+Although the exact phrases you say to her are important,
+They alone won’t make her feel emotional.
+
+You need to have open body language,
+Master small talk to avoid having dry conversations,
+And know how to have good conversations over text.
+
+That’s why in my 3-month coaching program,
+You’ll not only learn how to speak to women to become a walking chick magnet,
+But you’ll also get access to
+My fiercely guarded PREMIUM seduction secrets to become irresistibly attractive to women.
+Exclusive coaching calls to learn texting basics, bedroom mastery, and everything in between.
+Access to my Brotherhood Facebook group to get so many dates you can’t fit them all on your calendar.
+
+As a bonus,
+If you haven’t been on any dates after the 3 months,
+You can stay in the program for FREE until you do.
+
+Click here to apply for your 1:1 breakthrough session.
+
+Because it’s Christmas time,
+There’s going to be a huge discount.
+
+So if you're looking for world-class coaching while saving money,
+Click here to start attracting high-quality women.
+
+See you inside,
+&lt;name&gt;.</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- FREE VALUE EMAILS -->
+  <details id="emails-value">
+    <summary>Free Value Emails</summary>
+    <div class="detail-body">
+      <div class="script" id="value-email-1">
+        <h4>Free Value Email #1 — IG coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Value</span>
+          <span class="badge">Topic: Branding</span>
+        </div>
+        <pre class="copy">Subject Line: Trump or Harris?
+Preview Text: Branding mistakes from their campaigns…
+
+Hey %FIRSTNAME%,
+
+Regardless of who you wanted to win the presidential election,
+You were likely bombarded with automated texts promoting a specific candidate.
+
+But despite being irritating,
+The messages teach an important lesson on how NOT to build a brand on IG.
+
+Think about it…
+Did you enjoy seeing those spammy unpersonalized messages?
+
+You probably just ignored them, and for good reason.
+
+The thing is %FIRSTNAME%…
+People hate being sold to.
+
+Ads are so common nowadays.
+You’re probably tired of seeing them in every corner of the internet.
+
+That’s why people more than ever before crave genuine and approachable brands,
+As opposed to ones that are constantly hard-selling.
+
+To make sure your brand falls into the first category,
+You need to do the following:
+Be authentic and share your personality so your target audience can easily connect with you.
+Make the content engaging so people look forward to your posts.
+Give actionable value so your audience sees you as the go-to authority in your niche.
+
+By implementing these tips,
+Your content will engage your target audience better.
+
+Talk soon,
+&lt;name&gt;.
+
+P.S. If you’d like more insights to boost your Instagram engagement,
+I’m starting a new Instagram series where I share the best branding tips for 2025!
+To make sure you don’t miss out,
+Click here to follow me on Instagram.</pre>
+      </div>
+
+      <div class="script" id="value-email-2">
+        <h4>Free Value Email #2 — Dating coach (8-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Value</span>
+          <span class="badge">Topic: Confidence</span>
+        </div>
+        <pre class="copy">Subject Line: This email will kill your social anxiety
+Preview Text: 8 years of dating experience inside
+
+Hey %FIRSTNAME%,
+
+Do you tend to stay home and keep to a small circle of friends?
+If so, you’re just like me when I was 20.
+
+I would play video games all day without talking to anyone.
+I was so shy that my hands used to shake uncontrollably whenever I’d talk to women.
+
+Every time I’d talk to one at the grocery store,
+I’d have a nervous breakdown and stutter and look like an idiot.
+
+It got to the point where even going out in public was hard sometimes.
+I didn’t know if I’d ever be able to get rid of my social anxiety.
+
+But after a few months, just by implementing 3 new habits,
+I found that I was not only able to overcome my social anxiety,
+But also turn on my ‘extrovert switch’ whenever necessary.
+
+Here are 3 things I did to overcome my social anxiety about talking to women.
+
+1. Say ‘yes’ whenever you’re invited somewhere.
+Even if the activity bored me to tears,
+I’d show up to get more chances to leave the house and talk to people.
+
+Women can sense if you haven’t talked to anyone in months,
+So give yourself as many opportunities to socialize as possible.
+
+2. Leave your house for at least 20-30 minutes every day.
+It doesn’t matter where you go as long as you talk to everyone you see.
+
+I started doing this when I was 20,
+And I’m still consistent with it at 28 years old.
+
+I just make simple comments like…
+“Hey, how’s your day going?”
+“I like your glasses.”
+“You have a cool outfit.”
+
+Regularly talking to everybody will make you more comfortable around women.
+
+3. Go to a nightlife venue at least once per week.
+Stay sober the entire time and talk to as many people as possible.
+
+It might feel uncomfortable being around drunk people,
+But if you drop any judgment, you’ll enjoy yourself more.
+
+Use what I call the ‘anti-drunk method’.
+Drunk people don’t care what others think,
+So you need to do the same.
+
+Once you start letting loose while speaking,
+You’ll come off as more likable.
+
+Those are 3 life-changing habits you can apply to your daily life.
+
+Even though I don’t have difficulties talking to women anymore,
+I still follow these habits because they help me feel more confident,
+And I’m sure they’ll help you too.
+
+Rooting for you.
+-&lt;name&gt;.
+
+P.S. If you want more tips for building confidence around women,
+Click here to follow me on Instagram.</pre>
+      </div>
+
+      <div class="script" id="value-email-3">
+        <h4>Free Value Email #3 — eCom coach (8-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Value</span>
+          <span class="badge">Topic: FB targeting</span>
+        </div>
+        <pre class="copy">Subject Line: Your FB targeting strategy is DEAD
+Preview Text: Here’s what to do instead…
+
+Hey %FIRSTNAME%,
+
+If you’re an ecom business owner,
+Then you may have been using...
+
+Interest-based targeting,
+Lookalikes,
+Or custom audiences to target on Facebook Ads,
+
+If so, then listen closely to what I’m about to tell you…
+
+STOP IT.
+
+Even though it’s what most gurus are preaching,
+These targeting methods are outdated.
+
+When I switched to the opposite approach,
+My store went from making 140k/mo to 783k/mo in just 8 months.
+
+You can find the details in my newest YouTube video.
+
+In it, I go over:
+The targeting shift I made to 5.5x my income and how you can use it too.
+How I target ads to over 150 million people with this new method, while simultaneously reaching the ideal audience.
+How I take advantage of the Facebook algorithm to show more ads to engage audiences and maximize ad spend.
+
+…And so much more
+
+Click here to discover the NEW best Facebook targeting strategy in 2024.
+
+See ya over there, %FIRSTNAME%.
+-&lt;name&gt;
+
+P.S. Whenever you’re ready, here are 3 ways I can help ya succeed with eCommerce 👇
+
+[FREE] Reply with “TRAINING” and I’ll show you the “LEB” business model that created 1,500+ successful students.
+[BEGINNERS] Reply with “ACADEMY” to start a successful online store in 2-3 months.
+[ADVANCED] Reply with “ESS” for 1:1 guidance to scale your online store to 7 or 8 figures ASAP.</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- URGENCY EMAILS -->
+  <details id="emails-urgency">
+    <summary>Urgency Emails</summary>
+    <div class="detail-body">
+      <div class="script" id="urgency-email-1">
+        <h4>Urgency Email #1 — B2B coach (8-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Urgency</span>
+          <span class="badge">Format: Live event</span>
+        </div>
+        <pre class="copy">Subject Line: Please steal 15k from me👇
+Preview Text: Here’s what I mean…
+
+Hey %FIRSTNAME%,
+
+If you offer coaching, consulting, or run a DFY agency,
+Then you’re probably familiar with the following…
+
+Cold calling for 3 hours without reaching a single interested prospect.
+Sending 2000 emails without finding any warm leads.
+Paying thousands for a course only for it to be filled with generic templates.
+
+These experiences aren’t enjoyable for most people.
+You usually need to spend days outreaching before seeing results.
+
+But I spoke to my friend Adam recently,
+And he came up with a new way to get qualified leads for his agency.
+
+He calls his new method the “2-step Webinar Cracker”,
+And he got 35% of his contacts to join his agency as a result of it.
+
+He’s also taught hundreds of other people how to use this framework,
+And many of them have hit their first 30k, 50k, and even 100k+ month because of it.
+
+Unlike other ‘gurus’ who may charge 15k for their frameworks,
+Adam and I will be showing you how this method works in a F.R.E.E. 2-day live event.
+
+The event will take place December 10-11 from 7-10 pm EST on both days.
+
+If you want to learn how the “2-step Webinar Cracker” works,
+Click here to hit your first 5 or 6-figure month with your agency.
+
+Stay scaling,
+&lt;name&gt;.
+
+P.S. Don’t worry, we won’t be selling you any courses during the event.
+P.P.S. The meeting room can only fit up to 30 people.
+If the link above still works,
+I’d recommend signing up as soon as possible to avoid missing out.</pre>
+      </div>
+
+      <div class="script" id="urgency-email-2">
+        <h4>Urgency Email #2 — Creative coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Urgency</span>
+          <span class="badge">Angle: Guarantee</span>
+        </div>
+        <pre class="copy">Subject Line: [EMBARRASING] This mistake cost me 8k🤦
+Preview Text: Here’s how you can avoid making it…
+
+Hey %FIRSTNAME%,
+
+If I got a dollar every time a creative made this stupid mistake,
+I’d look like this:
+
+I even lost 8k in 2021 because of this error.
+
+But after correcting myself,
+I was able to land 5k+ deals with only half the number of outreaches.
+
+The one thing that held me back was…
+I didn’t offer a guarantee in my deal.
+
+So %FIRSTNAME%,
+Include some form of guarantee in every deal you make.
+
+If you can make the work so high quality no one would ever ask for a refund,
+You’ll be able to get clients on command.
+
+Because Black Friday’s around the corner,
+I’ll be offering a HUGE discount for my Creative Biz Launch Skool community.
+
+If you’d like access to these systems at the most affordable price my community will ever be at,
+Click here to start winning with your creative business.
+
+See you after my shower,
+&lt;name&gt;.
+
+P.S. The community will go back to normal price after Black Friday,
+So to make sure you don’t miss the discount,
+I’d recommend joining as soon as possible.</pre>
+      </div>
+
+      <div class="script" id="urgency-email-3">
+        <h4>Urgency Email #3 — Creative coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Urgency</span>
+          <span class="badge">Angle: Outreach framework</span>
+        </div>
+        <pre class="copy">Subject Line: Your business is like a wedding
+Preview Text: Here’s how…
+
+%FIRSTNAME%, I recently married my best friend at my wedding.
+
+But believe it or not,
+The marriage taught me an important lesson about outreaching to creative clients.
+
+If I asked her to marry me the moment I saw her,
+She probably would’ve walked away and never spoken to me again 😂.
+
+The same principle applies to your creative business.
+
+So many business owners ask the prospects to hire them before introducing themselves…
+
+That’s like asking them to marry you without even getting on a call with them.
+
+You just need to follow the “Date 2 Marry method”.
+
+The framework has 3 basic features…
+Show them you’ve done your homework by personalizing the outreach.
+Lead with value by offering a specific idea or solution you can bring to the table.
+Keep it short and direct. No one has time to read a novel.
+
+If you’d like to start getting more positive replies,
+Click here for access to “Date 2 Marry” swipe files and coaches.
+
+Talk soon,
+&lt;name&gt;.</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- TESTIMONIAL EMAILS -->
+  <details id="emails-testimonials">
+    <summary>Testimonial Emails</summary>
+    <div class="detail-body">
+      <div class="script" id="testimonial-email-1">
+        <h4>Testimonial Email #1 — B2B coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Testimonial</span>
+          <span class="badge">Angle: ROI</span>
+        </div>
+        <pre class="copy">Subject Line: How he turned $900 into $20k
+Preview Text: With only 350 followers…
+
+Hey %FIRSTNAME%,
+
+Messages like this:
+
+I’m gonna give you the strategy he used to go from $900/mo to $20k/mo.
+
+Two short months later,
+He closed 5 clients contracting $20k,
+And monetized his 350 followers to generate an additional $5k MRR.
+
+If you’d like to learn how to run Sniper Ads in the same way he did,
+Click here for a step-by-step plan to increase your ROI exponentially.
+
+See you inside,
+&lt;name&gt;.</pre>
+      </div>
+
+      <div class="script" id="testimonial-email-2">
+        <h4>Testimonial Email #2 — Fitness business coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Testimonial</span>
+          <span class="badge">Angle: Constraints → outcome</span>
+        </div>
+        <pre class="copy">Subject Line: He made 5k from a hospital bed…
+Preview Text: Here’s how…
+
+Hey %FIRSTNAME%,
+
+Adam tore the quad tendons in both legs, forcing him to go to the hospital.
+
+But he was still able to type on his computer.
+
+2 months after being admitted, he made his first $500 online.
+Now, 4 months after that, he is making 5k/mo and is on his way to 10k/mo.
+
+He used the No Call Automated Sales Funnel.
+
+If you’d like to know more about the No Call Automated Sales Funnel,
+Click here to see if the funnel is a good fit for your fitness business.
+
+Signing off,
+&lt;name&gt;.</pre>
+      </div>
+
+      <div class="script" id="testimonial-email-3">
+        <h4>Testimonial Email #3 — SaaS coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Testimonial</span>
+          <span class="badge">Angle: Speed to results</span>
+        </div>
+        <pre class="copy">Subject Line: Get 35 SaaS clients in 30 seconds
+Preview Text: Here’s how…
+
+Hey %FIRSTNAME%,
+
+Forrest landed 35 paying SaaS clients in the first 2 weeks of starting his agency.
+
+Sam and I will explain how the “KWS” method works in a FREE live workshop.
+
+If you want to scale your agency to 6-figures in record time,
+Click here to sign up.
+
+See you on the other side,
+&lt;name&gt;.</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- STORY EMAILS -->
+  <details id="emails-stories">
+    <summary>Story Emails</summary>
+    <div class="detail-body">
+      <div class="script" id="story-email-1">
+        <h4>Story Email #1 — Mindset coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Story</span>
+          <span class="badge">Angle: Limiting beliefs</span>
+        </div>
+        <pre class="copy">Subject Line: Vrooooooommmmm😤
+Preview Text: Does your business sound like this?
+
+%FIRSTNAME%,
+
+I couldn’t get my bike to move.
+
+One of my friends pointed and said,
+“Your shaft is in neutral dude, not in drive.”
+
+The gear shaft on my motorcycle is a lot like limiting beliefs in business.
+
+When set to neutral,
+You’re not going anywhere.
+
+Start by recognizing which limiting beliefs are holding you back.
+Then, actively replace them with beliefs that align with your goals.
+
+You got this,
+&lt;name&gt;.</pre>
+      </div>
+
+      <div class="script" id="story-email-2">
+        <h4>Story Email #2 — Digital marketing coach (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Story</span>
+          <span class="badge">Angle: Origin story</span>
+        </div>
+        <pre class="copy">Subject Line: %FIRSTNAME%, you’re about to lose 3k/mo
+Preview Text: Here’s how to avoid this…
+
+A $3,000 daycare bill slapped me across my face.
+
+I went down the internet rabbit hole endlessly searching for a solution,
+Until I eventually came across digital marketing.
+
+Just one year after starting,
+I made my first 7-figures online.
+
+If you’d like to know how to start making reliable money online,
+Click here to watch my FREE digital marketing training.
+
+-&lt;name&gt;.</pre>
+      </div>
+
+      <div class="script" id="story-email-3">
+        <h4>Story Email #3 — Affiliate marketing coaches (7-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Story</span>
+          <span class="badge">Angle: Focus</span>
+        </div>
+        <pre class="copy">Subject Line: The Taiwan method to financial success
+Preview Text: Here’s how it works…
+
+Many people spread themselves too thin by hopping between business models.
+
+The people who started making thousands per month quickly went deep, not wide.
+
+Pick ONE business model,
+And don’t switch until you’ve found success.
+
+If you aren’t sure where to start,
+Click here to watch our FREE training.
+
+Signing off,
+&lt;name&gt;.</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- UPSELL EMAILS -->
+  <details id="emails-upsells">
+    <summary>Upsell Emails</summary>
+    <div class="detail-body">
+      <div class="script" id="upsell-email-1">
+        <h4>Upsell Email #1 — Dating coach (8-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Upsell</span>
+          <span class="badge">Trigger: Program completion</span>
+        </div>
+        <pre class="copy">Subject Line: Props to you…
+Preview Text: -
+
+Hey %FIRSTNAME%,
+
+Congratulations on finishing the final week of the 3-month coaching program.
+
+I made this quick feedback form.
+If you’re interested in being a part of the next courses I release,
+Click here to answer a few questions.
+
+Your Friend,
+&lt;name&gt;.</pre>
+      </div>
+
+      <div class="script" id="upsell-email-2">
+        <h4>Upsell Email #2 — Dating coach (8-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Upsell</span>
+          <span class="badge">Offer: Program 2.0</span>
+        </div>
+        <pre class="copy">Subject Line: What now?…
+Preview Text: Time to master the dating game
+
+Hey %FIRSTNAME%,
+
+Since you’ve been consistently consuming the information I’ve provided,
+I’ve released the new 3-month coaching program 2.0!
+
+Click here to learn more.
+
+Hope to see you inside %FIRSTNAME%.
+Your Friend,
+&lt;name&gt;.</pre>
+      </div>
+
+      <div class="script" id="upsell-email-3">
+        <h4>Upsell Email #3 — Dating coach (8-figure)</h4>
+        <div class="meta">
+          <span class="badge">Type: Upsell</span>
+          <span class="badge">Angle: “Date 4 women”</span>
+        </div>
+        <pre class="copy">Subject Line: Here’s why you should date 4 women
+Preview Text: Not what you think…
+
+%FIRSTNAME%,
+
+Acting like you're dating four girls will solve many of your needy problems.
+
+If you’d like access to this framework,
+Reply to this email with the word “FOUR”,
+And I’ll send it over to you.
+
+Your friend,
+&lt;name&gt;.</pre>
+      </div>
+    </div>
+  </details>
+
+  <p class="note" style="margin-top:14px;">
+    Tip: if you want this page to feel more “brand-safe,” you can keep edgier client copy inside collapsed dropdowns (like this),
+    and show only short excerpts by default.
+  </p>
+</section>
+
+<!-- =========================
+     DROP-IN UPDATE (Reels + Captions):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - after your "Emails" section
+       - or inside a broader "Social" section.
+     ========================= -->
+
+     <section class="card pad" id="reels-captions" style="margin-top:18px;">
+      <div class="section-head">
+        <div>
+          <h2>Instagram Reels & Captions</h2>
+          <p class="muted">
+            Short-form scripts + matching captions designed for hooks, retention, and comments-driven CTAs.
+            Each example includes the Reel script and the paired caption.
+          </p>
+    
+          <nav class="toc" aria-label="Reels subcategories">
+            <a href="#reel-1">Reel #1</a>
+            <a href="#reel-2">Reel #2</a>
+            <a href="#reel-3">Reel #3</a>
+          </nav>
+        </div>
+    
+        <div class="mini-cta">
+          <a class="btn secondary"
+             href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+             target="_blank" rel="noopener">View more →</a>
+        </div>
+      </div>
+    
+      <!-- Reel 1 -->
+      <details id="reel-1" open>
+        <summary>Instagram Reel #1 — YouTube automation coach (7-figure)</summary>
+        <div class="detail-body">
+          <div class="script">
+            <h4>Reel Script</h4>
+            <div class="meta">
+              <span class="badge">Format: Reel</span>
+              <span class="badge">Client: YouTube automation coach</span>
+              <span class="badge">Scale: 7-figure</span>
+              <span class="badge">CTA: Share</span>
+            </div>
+            <pre class="copy">[&lt;name&gt; riding a camel in Jordan]
+    
+    The only reason I was able to ride this camel?
+    
+    Because I defied all those around me.
+    
+    When I graduated high school,
+    
+    I knew I didn’t want to go to college.
+    
+    I told my family that I was going to become a YouTuber.
+    
+    They all laughed at the idea, but I didn’t care.
+    
+    I knew I didn’t want to work an “ordinary” job.
+    
+    It took me 2 years to make my first $5k online.
+    
+    During that time, all my family members and friends seriously doubted my ability to succeed.
+    
+    “Just quit, it’ll never work.”
+    “Why do you keep trying? You haven’t gotten anywhere.”
+    
+    But I refused to listen to anybody who was trying to discourage me.
+    
+    And 5 years later,
+    
+    I now run 12 faceless AI YouTube channels, bringing in over $150k/mo.
+    
+    I’ve traveled to over 7 countries, and am about to fly to my 8th.
+    
+    So whatever your values are,
+    
+    Stick to them,
+    
+    And don’t let anyone else discourage you from following your dream.</pre>
+          </div>
+    
+          <div class="script">
+            <h4>Caption</h4>
+            <pre class="copy">The only reason I was able to ride this camel?
+    
+    Because I defied all those around me.
+    
+    When I graduated high school,
+    
+    I knew I didn’t want to go to college.
+    
+    I told my family that I was going to become a YouTuber.
+    
+    They all laughed at the idea, but I didn’t care.
+    
+    I knew I didn’t want to work an “ordinary” job.
+    
+    It took me 2 years to make my first $5k online.
+    
+    During that time, all my family members and friends seriously doubted my ability to succeed.
+    
+    “Just quit, it’ll never work.”
+    “Why do you keep trying? You haven’t gotten anywhere.”
+    
+    But I refused to listen to anybody who was trying to discourage me.
+    
+    And 5 years later,
+    
+    I now run 12 faceless AI YouTube channels, bringing in over $150k/mo.
+    
+    I’ve traveled to over 7 countries, and am about to fly to my 8th.
+    
+    So whatever your values are,
+    
+    Stick to them,
+    
+    And don’t let anyone else discourage you from following your dream.
+    
+    &lt;name&gt;.
+    
+    ✅Share this with a friend who needs some motivation.</pre>
+          </div>
+        </div>
+      </details>
+    
+      <!-- Reel 2 -->
+      <details id="reel-2">
+        <summary>Instagram Reel #2 — Real estate coach event promo (9-figure)</summary>
+        <div class="detail-body">
+          <div class="script">
+            <h4>Reel Script</h4>
+            <div class="meta">
+              <span class="badge">Format: Reel</span>
+              <span class="badge">Client: Real estate coach</span>
+              <span class="badge">Scale: 9-figure</span>
+              <span class="badge">CTA: Comment “VEGAS”</span>
+            </div>
+            <pre class="copy">Do you want to learn from the top real estate investors?
+    
+    If so, join me and my team in Las Vegas for WealthCon.
+    
+    It’ll be taking place from July 23-27.
+    
+    And you’ll be able to learn from some of the most successful entrepreneurs,
+    
+    Such as Thach Nguyen, Andy Elliott, and myself.
+    
+    Not only that,
+    
+    But you’ll also have the opportunity to network with many other 7, 8, and 9-figure earners from all different industries.
+    
+    I know that I wouldn’t have been able to invest in $100M of real estate without my network.
+    
+    As a bonus,
+    
+    You’ll have many special opportunities for fun activities,
+    
+    Such as attending a welcome party, VIP lunches, and being able to spend an entire day at my office.
+    
+    Spots are going to fill up CRAZY FAST.
+    
+    This is my first time hosting an event like this,
+    
+    And I don’t know when this kind of opportunity will come next.
+    
+    So take advantage of the chance before it’s gone.
+    
+    If you’re interested in attending WealthCon,
+    
+    AND want to take advantage of the special discount that’s currently happening,
+    
+    Comment the word “VEGAS”,
+    
+    And I’ll send you more details about the event.</pre>
+          </div>
+    
+          <div class="script">
+            <h4>Caption</h4>
+            <pre class="copy">Do you want to learn from the top real estate investors?
+    
+    If so, join me and my team in Las Vegas for WealthCon.
+    
+    It’ll be taking place from July 23-27.
+    
+    And you’ll be able to learn from some of the most successful entrepreneurs,
+    
+    Such as Thach Nguyen, Andy Elliott, and myself.
+    
+    Not only that,
+    
+    But you’ll also have the opportunity to network with many other 7, 8, and 9-figure earners from all different industries.
+    
+    I know that I wouldn’t have been able to invest in $100M of real estate without my network.
+    
+    As a bonus,
+    
+    You’ll have many special opportunities for fun activities,
+    
+    Such as attending a welcome party, VIP lunches, and being able to spend an entire day at my office.
+    
+    If you’re interested in attending WealthCon,
+    
+    AND want to take advantage of the special discount that’s currently happening,
+    
+    Comment the word “VEGAS”,
+    
+    And I’ll send you more details about the event.
+    
+    Hope to see you there,
+    
+    Ryan.
+    
+    P.S. Spots are going to fill up CRAZY FAST.
+    
+    This is my first time hosting an event like this,
+    
+    And I don’t know when this kind of opportunity will come next.
+    
+    So take advantage of the chance before it’s gone.</pre>
+          </div>
+        </div>
+      </details>
+    
+      <!-- Reel 3 -->
+      <details id="reel-3">
+        <summary>Instagram Reel #3 — Dating coach (7-figure)</summary>
+        <div class="detail-body">
+          <div class="script">
+            <h4>Reel Script</h4>
+            <div class="meta">
+              <span class="badge">Format: Reel</span>
+              <span class="badge">Client: Dating coach</span>
+              <span class="badge">Scale: 7-figure</span>
+              <span class="badge">CTA: Comment “SWIPE”</span>
+            </div>
+            <pre class="copy">If you're struggling to get more dates on apps,
+    
+    It may be because of this 1 big mistake I see many men make.
+    
+    [In this part, &lt;name&gt; wears a backward cap and acts like a guy swiping on an app.]
+    
+    “She’s an accountant?
+    Nah, she’s probably boring.
+    
+    She’s wearing a cross in a photo?
+    I’ll pass, I don’t want to date someone who’s extremely religious.
+    
+    She has a photo of herself on a farm?
+    No thank you, I prefer to live in the city, so the relationship probably won’t work out.”
+    
+    [Back to being &lt;name&gt;.]
+    
+    Stop.
+    
+    Dating apps only show a tiny part of someone’s personality.
+    
+    You can’t know everything about a person just by looking at a couple of photos.
+    
+    Here’s the truth:
+    
+    That accountant you thought would be boring could be one of the funniest, most adventurous people you ever met.
+    
+    That girl wearing the cross might not be religious.
+    She may just be wearing it because her family does.
+    
+    And that woman on the farm could’ve just been visiting the place.
+    She may like the city just as much as you do.
+    
+    The point is…
+    
+    You should avoid swiping solely based on surface-level judgments.
+    
+    Remove the filters,
+    Have an open mind when you swipe on the apps.
+    
+    And you’ll be amazed at the people you might meet.
+    
+    But wait…
+    
+    Before you start swiping,
+    You should know that having an open mind alone won’t get you dates.
+    
+    If the pictures on your profile don’t stand out,
+    You don’t know what openers to send,
+    Or you can’t turn texts into real-life dates,
+    Then you probably won’t have much success on the apps.
+    
+    So if you’d like to learn all my dating app secrets to turn your profile into a woman magnet,
+    
+    Comment the word “SWIPE” and I’ll send you my free guide to master dating apps in 2025.</pre>
+          </div>
+    
+          <div class="script">
+            <h4>Caption</h4>
+            <pre class="copy">If you're struggling to get more dates on apps,
+    
+    It may be because of this 1 thing that many men don’t understand:
+    
+    Dating apps only show a tiny part of someone’s personality.
+    
+    You can’t know everything about a person just by looking at a couple of photos.
+    
+    Because of this,
+    
+    You should avoid swiping solely based on surface-level judgments.
+    
+    For example,
+    
+    That accountant you thought would be boring could be one of the funniest, most adventurous people you ever met.
+    
+    That girl wearing the cross might not be religious.
+    She may just be wearing it because her family does.
+    
+    And that woman on the farm could’ve just been visiting the place.
+    She may like the city just as much as you do.
+    
+    So remove the filters,
+    Have an open mind when you swipe on the apps,
+    And you’ll be amazed at the people you might meet.
+    
+    But wait…
+    
+    There’s more to getting dates than just swiping.
+    
+    If the pictures on your profile don’t stand out,
+    You don’t know what openers to send,
+    Or you can’t turn texts into real-life dates,
+    Then you probably won’t have much success on the apps.
+    
+    So if you’d like to learn all my dating app secrets to turn your profile into a woman magnet,
+    
+    Comment the word “SWIPE” and I’ll send you my free guide to master dating apps in 2025.</pre>
+          </div>
+        </div>
+      </details>
+    
+      <p class="note" style="margin-top:14px;">
+        Want this tighter? I can convert each Reel into a <em>collapsed excerpt</em> (hook + CTA only),
+        with a “View full script” toggle so the page stays scannable.
+      </p>
+    </section>
+  
+    <!-- =========================
+     DROP-IN UPDATE (LinkedIn Posts):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - after the "Emails" section (or after IG Reels/Captions)
+     ========================= -->
+
+<section class="card pad" id="linkedin-posts" style="margin-top:18px;">
+  <div class="section-head">
+    <div>
+      <h2>LinkedIn Posts</h2>
+      <p class="muted">
+        Organic posts written for creators and coaches—story-led hooks, event promos, and comment-to-get-CTA formats.
+        Examples below are shown as excerpts for scannability.
+      </p>
+
+      <nav class="toc" aria-label="LinkedIn post examples">
+        <a href="#li-post-1">Post 1</a>
+        <a href="#li-post-2">Post 2</a>
+        <a href="#li-post-3">Post 3</a>
+      </nav>
+    </div>
+
+    <div class="mini-cta">
+      <a class="btn secondary"
+         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+         target="_blank" rel="noopener">View full context →</a>
+    </div>
+  </div>
+
+  <!-- Post 1 -->
+  <details id="li-post-1" open>
+    <summary>Post 1 — Motivation story (camel photo)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Format: Story</span>
+          <span class="badge">Hook: Visual + contrarian</span>
+          <span class="badge">CTA: Share</span>
+        </div>
+
+        <pre class="copy">[image of riding a camel in Jordan]
+
+The only reason I was able to ride this camel?
+
+Because I defied all those around me.
+
+When I graduated high school,
+I knew I didn’t want to go to college.
+I told my family that I was going to become a YouTuber.
+They all laughed at the idea, but I didn’t care.
+
+It took me 2 years to make my first $5k online.
+During that time, all my family members and friends seriously doubted my ability to succeed.
+
+“Just quit, it’ll never work.”
+“Why do you keep trying? You haven’t gotten anywhere.”
+
+But I refused to listen to anybody who was trying to discourage me.
+
+And 5 years later,
+I now run 12 faceless AI YouTube channels, bringing in over $150k/mo.
+
+So whatever your values are,
+Stick to them,
+And don’t let anyone else discourage you from following your dream.
+
+<name>.
+
+✅Share this with a friend who needs some motivation.</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- Post 2 -->
+  <details id="li-post-2">
+    <summary>Post 2 — Event promo (Cancun) + comment CTA</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Format: Event promo</span>
+          <span class="badge">Mechanism: FOMO + social proof</span>
+          <span class="badge">CTA: Comment keyword</span>
+        </div>
+
+        <pre class="copy">Wanna go to paradise to learn from the top real estate investors?
+
+If so, join me and my team in Cancun for 5 days.
+
+You’ll be surrounded by the world’s best entrepreneurs,
+all of whom are making at least $1M/mo.
+
+Not only will you learn exclusive lessons on buying homes,
+but we’re also going to do lots of fun activities together,
+such as going to the beach and pool parties,
+(Plus, it’s also an end-of-year tax write-off for me🤭).
+
+There’s a special pricing deal available this week,
+so if you’re interested in learning more about the event,
+
+Comment the word “CANCUN”,
+And I’ll send you the details about the tickets.
+
+Hope to see you there,
+<name>.
+
+P.S. Spots are going to fill up CRAZY FAST.
+This is my first time hosting an event like this,
+and I don’t know when this kind of opportunity will come next.</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- Post 3 -->
+  <details id="li-post-3">
+    <summary>Post 3 — Career pivot story (beach photo) + engagement prompt</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Format: Story</span>
+          <span class="badge">Arc: Dissatisfaction → decision → payoff</span>
+          <span class="badge">CTA: Comment prompt</span>
+        </div>
+
+        <pre class="copy">[image relaxing on the beach]
+
+They told me going to college was the safe option for a good life,
+but did it turn out that way?
+
+I tried dropshipping while pursuing a finance major…
+I didn’t get many results…
+so I quit and got a “real job”.
+
+But I was miserable.
+
+Having to go into the office every day…
+surrounded by four blank walls…
+staring at a computer screen…
+I felt like my soul was being sucked out of my body.
+
+This changed during one summer week.
+
+A friend had a wedding in Paris,
+but my boss wouldn’t let me take the days off.
+
+That was the breaking point.
+
+In the next month,
+I put in my 2 weeks' notice,
+moved to Barcelona,
+got a 9-5 retail job,
+and restarted dropshipping.
+
+The result after 2 years?
+
+I’m able to enjoy a sunny afternoon surfing the waves without worrying about money.
+
+Sometimes, all it takes is a single moment to change your life,
+one where you say:
+‘I’m going to change my life,
+and I won’t stop until I’m successful.’
+
+So that was my story,
+but now, I want to know more about you.
+
+Comment what goals you’re currently working on👇.
+I’d love to hear them.
+
+<name>.</pre>
+      </div>
+    </div>
+  </details>
+
+  <p class="note" style="margin-top:14px;">
+    Tip: If you want a cleaner look, I can convert these into a 3-card grid (“Story”, “Event promo”, “Career pivot”)
+    and open each post in a modal instead of showing full text by default.
+  </p>
+</section>
+
+<!-- =========================
+     DROP-IN UPDATE (Product Page Copy):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - after "Landing Pages" (or after LinkedIn Posts)
+     ========================= -->
+
+     <section class="card pad" id="product-pages" style="margin-top:18px;">
+      <div class="section-head">
+        <div>
+          <h2>Product Pages</h2>
+          <p class="muted">
+            E-commerce product page copy designed to increase conversion with clearer benefits, tighter structure,
+            and stronger differentiation.
+          </p>
+    
+          <nav class="toc" aria-label="Product page examples">
+            <a href="#pp-1">Sleep Mask PDP</a>
+          </nav>
+        </div>
+    
+        <div class="mini-cta">
+          <a class="btn secondary"
+             href="https://sundaysilks.com/products/silk-sleep-mask-1pk-regular-midnight-black"
+             target="_blank" rel="noopener">Reference product page →</a>
+        </div>
+      </div>
+    
+      <details id="pp-1" open>
+        <summary>Sleep Mask Product Page — 3D Contour Silk Sleep Mask (sample)</summary>
+        <div class="detail-body">
+          <div class="script">
+            <div class="meta">
+              <span class="badge">Format: PDP</span>
+              <span class="badge">Goal: Conversion</span>
+              <span class="badge">Focus: Benefits + differentiation</span>
+            </div>
+    
+            <article class="pdp">
+              <header class="pdp-hero">
+                <h3 class="pdp-title">3D Contour Silk Sleep Mask</h3>
+                <p class="pdp-subhead">100% pure Mulberry silk. Total blackout. Zero pressure.</p>
+    
+                <ul class="pdp-bullets">
+                  <li><strong>100% blackout</strong> contoured cups block light without crushing lashes</li>
+                  <li><strong>Comfort-first fit</strong>—no pressure on eyes, no tight pinching</li>
+                  <li><strong>Skin + hair friendly</strong> silk reduces friction for less frizz and fewer sleep lines</li>
+                  <li><strong>All-season comfort</strong> breathable, temperature-regulating silk</li>
+                  <li><strong>Hypoallergenic</strong> OEKO-TEX® certified materials</li>
+                </ul>
+    
+                <div class="pdp-cta">
+                  <a class="btn primary" href="#contact" style="text-decoration:none;">Request full PDP draft →</a>
+                  <span class="muted" style="display:block; margin-top:6px;">(I can adapt this to your brand voice + offer.)</span>
+                </div>
+              </header>
+    
+              <section class="pdp-section">
+                <h4>Why this mask works better</h4>
+                <p class="muted">
+                  Most sleep masks either leak light, tug your hair, or press on your eyes. This design uses 3D contoured cups
+                  to create complete darkness while staying weightless on your face.
+                </p>
+    
+                <div class="grid-2" style="margin-top:14px;">
+                  <div class="tile">
+                    <strong>Pressure-free contours</strong>
+                    <p>Silk-filled padding hugs gently so you sleep deeper—without headaches or eye discomfort.</p>
+                  </div>
+                  <div class="tile">
+                    <strong>Gentle on skin + hair</strong>
+                    <p>Mulberry silk glides instead of pulling—helping reduce frizz, tangles, and irritation.</p>
+                  </div>
+                  <div class="tile">
+                    <strong>Cool in summer, cozy in winter</strong>
+                    <p>Silk naturally regulates temperature so you stay comfortable year-round.</p>
+                  </div>
+                  <div class="tile">
+                    <strong>Clean, allergy-friendly</strong>
+                    <p>Hypoallergenic materials resist dust mites and irritants for a fresher sleep environment.</p>
+                  </div>
+                </div>
+              </section>
+    
+              <section class="pdp-section">
+                <h4>Benefits of sleeping on silk</h4>
+                <ul class="checklist">
+                  <li><strong>Fewer sleep lines</strong> thanks to lower friction vs. cotton</li>
+                  <li><strong>Smoother hair</strong> with less breakage and morning frizz</li>
+                  <li><strong>Better comfort</strong> with breathable, moisture-friendly fibers</li>
+                  <li><strong>Less irritation</strong> for sensitive skin</li>
+                </ul>
+              </section>
+    
+              <section class="pdp-section">
+                <h4>Guarantee</h4>
+                <p class="muted">
+                  Try it, love it, or get your money back. Simple, risk-free, and built to help you sleep better—fast.
+                </p>
+              </section>
+    
+              <section class="pdp-section">
+                <h4>Reviews</h4>
+                <p class="muted">[Insert review highlights + star rating snippets here]</p>
+              </section>
+    
+              <footer class="pdp-section">
+                <p class="muted">
+                  Note: This is sample structure + copy. I can rewrite with your brand’s tone, proof points, and offer details.
+                </p>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- =========================
+     DROP-IN UPDATE (Sales Pages):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - after "Landing Pages" (and before Product Pages, or after Product Pages)
+     ========================= -->
+
+<section class="card pad" id="sales-pages" style="margin-top:18px;">
+  <div class="section-head">
+    <div>
+      <h2>Sales Pages</h2>
+      <p class="muted">
+        Long-form sales page copy written to drive conversions—story-led positioning, belief shifting,
+        offer stacking, pricing justification, FAQ handling, and strong CTAs.
+        Examples below are shown as excerpts for scannability.
+      </p>
+
+      <nav class="toc" aria-label="Sales page examples">
+        <a href="#sp-1">FE Sales Page</a>
+        <a href="#sp-2">PT Sales Page</a>
+      </nav>
+    </div>
+
+    <div class="mini-cta">
+      <a class="btn secondary"
+         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+         target="_blank" rel="noopener">View full context →</a>
+    </div>
+  </div>
+
+  <!-- Sales Page 1 -->
+  <details id="sp-1" open>
+    <summary>FE Sales Page — Spiritual Freedom Program (ACTIVE mE)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Format: Long-form</span>
+          <span class="badge">Mechanism: Identity + belief shift</span>
+          <span class="badge">Skills: Story • Offer stack • Price anchoring</span>
+        </div>
+
+        <pre class="copy">A Personal Invitation for Women Ready to Find True Freedom…
+Discover How Hundreds of Women Have “Quantum Leaped” to Live Lives of Joy, Fulfillment, and Freedom…
+
+When was the last time you woke up and thought:
+“I am free to love and be loved.”
+“I’m unique and accepted as the way I am.”
+“I walk through this world with a calm confidence and peace.”
+
+If those words seem distant… please know it’s not your fault.
+
+Hi, I’m Victoria Rader.
+
+In 2013, my life was unstable…
+My marriage was shaky… I was homeschooling my 2 kids…
+And I experienced deep loss—11 friends, family members, and clients passed away…
+
+In the middle of the night, I was woken up by a whisper that led me to a deep spiritual realization:
+“You cannot fight darkness. To chase it away, you have to be the light.”
+
+…(offer introduction)
+
+To ensure I do that, I created ACTIVE mE.
+
+Inside the program, you’ll get:
+▶️ Course in Miracles with daily activities…
+▶️ Money Mastery Manifesting…
+▶️ Chakra series manifesting…
+▶️ My Radiant Body Manifesting…
+▶️ The science of getting rich…
+▶️ 17 monthly manifesting sessions…
+
+BONUSES (worth $1,500):
+▶️ I’m in Business… Time to Thrive (Worth $500)
+▶️ Group Healing (Worth $700)
+▶️ Manifesting LAB (Worth $150)
+▶️ Spiritual Genes Coding (Worth $150)
+
+Instead of $30k/year… you can join today for $1497/year.
+
+JOIN ACTIVE mE TODAY
+
+FAQs + final CTA included.</pre>
+
+        <p class="note" style="margin-top:12px;">
+          Note: Full page version includes testimonials, repeated CTAs, objection handling, and FAQ framing.
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <!-- Sales Page 2 -->
+  <details id="sp-2">
+    <summary>PT Sales Page — Primal Method 2.0 (Playbook App subscription)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Format: Long-form</span>
+          <span class="badge">Mechanism: Problem framing + authority</span>
+          <span class="badge">Skills: Offer clarity • Subscription framing • Trial CTA</span>
+        </div>
+
+        <pre class="copy">For Busy Professionals Ready to Restore Your Physical Ability…
+Discover the “Primal Method 2.0” PT Patients Have Recently Been Using to Reduce Pain, Restore Mobility…
+
+When was the last time you woke up and thought:
+“It feels like I’m on a never-ending treadmill of pain management.”
+“I just want something that gets to the root of my issue.”
+
+Hi, I’m Dr. JJ Thomas.
+
+After graduating from the #1-ranked physical therapy school in the U.S.,
+I eventually grew Primal PT to 20 locations…
+
+Then COVID hit… so I created online training programs.
+Most people not only recovered… they became more fit than they imagined from home.
+
+To ensure I help people long-term, I created The Playbook App.
+
+Inside, you’ll get:
+▶️ Get Fit Fast (at-home)
+▶️ Get Fit Fast Equipment (gym)
+▶️ 6-Minute Abs
+▶️ Primal Locomotion
+▶️ Simple Nutrition Guides
+▶️ Messaging access to me
+▶️ Community support
+
+Instead of $30k/year… join for $14.99/month or $99.99/year.
+
+Download The Playbook App now
+
+Includes a 7-day trial + guarantee framing + FAQs.</pre>
+
+        <p class="note" style="margin-top:12px;">
+          Note: Full page version includes testimonials, plan comparison, stronger FAQ completion, and refund language cleanup.
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <p class="note" style="margin-top:14px;">
+    Tip: For a cleaner look, I can convert these into a 2-card grid (“Program FE”, “Subscription App”)
+    and open the full copy in a modal or separate “Case Study” page.
+  </p>
+</section>
+
+<!-- =========================
+     DROP-IN UPDATE (VSL Scripts):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - after "Sales Pages" and before "Landing Pages" or "Emails" (either is fine)
+     ========================= -->
+
+     <section class="card pad" id="vsl-scripts" style="margin-top:18px;">
+      <div class="section-head">
+        <div>
+          <h2>VSL Scripts</h2>
+          <p class="muted">
+            Video Sales Letter scripts built to hold attention and convert—hook → authority → belief shifting →
+            framework → offer → scarcity → CTA. Examples shown as excerpts for scannability.
+          </p>
+    
+          <nav class="toc" aria-label="VSL script examples">
+            <a href="#vsl-1">VSL 1</a>
+          </nav>
+        </div>
+    
+        <div class="mini-cta">
+          <a class="btn secondary"
+             href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+             target="_blank" rel="noopener">View full context →</a>
+        </div>
+      </div>
+    
+      <!-- VSL 1 -->
+      <details id="vsl-1" open>
+        <summary>VSL 1 — YouTube Growth Coach (VCP framework)</summary>
+        <div class="detail-body">
+          <div class="script">
+            <div class="meta">
+              <span class="badge">Format: VSL / Webinar script</span>
+              <span class="badge">Mechanism: Framework + myth-busting</span>
+              <span class="badge">Skills: Hook • Authority • Offer • CTA</span>
+            </div>
+    
+            <pre class="copy">INTRO (Promise + Big Outcome)
+    In this video, I’m going to show you exactly how people are making over $10k/mo
+    working less than 20 hours per week by creating YouTube channels from scratch…
+    
+    By the end of this training, you’ll know the 3-step “VCP” framework:
+    1) Visibility — reach the most people in the least time
+    2) Consumability — keep viewers watching + build KLT (know/like/trust)
+    3) Profitability — monetize on autopilot beyond AdSense
+    
+    WHO AM I? (Authority + Relatability)
+    My name is &lt;name&gt;… I grew my channel to $100k/mo in passive income…
+    I worked at Deloitte… hated the office life… wanted to live in Madeira…
+    After 2 years I hit $10k/mo, quit, moved, and worked 2–4 hours/day…
+    
+    VALUE (Myths that block action)
+    Myth #1: You need the best equipment → you only need “good enough”
+    Myth #2: Certain countries have advantages → global playing field
+    Myth #3: Ad revenue is the best path → YouTube entrepreneur model
+    Myth #4: YouTube is oversaturated → demand proves the platform works
+    
+    THE UNIQUE SYSTEM (VCP Breakdown)
+    Visibility: choose a profitable niche + attract buyers
+    Consumability: build KLT with positioning + expertise
+    Profitability: market the offer without being overly pushy
+    
+    OFFER (Program + Bonuses + Disclaimer)
+    “YouTube Intensive” + 24/7 support
+    Bonus: 100 proven channel templates guide
+    Bonus: 2-hour personal brand course
+    Disclaimer: don’t copy formats—learn principles, apply uniquely
+    
+    CLOSE (Options + Scarcity + CTA)
+    Option 1: join the community + accelerate results
+    Option 2: figure it out alone and lose time
+    Only 12 student spots left this cycle
+    Apply below → book a free call to see if it’s a fit.</pre>
+    
+            <p class="note" style="margin-top:12px;">
+              Tip: If you want this to look premium, we can add a “Script Map” (Hook → Story → Myths → Framework → Offer → CTA)
+              as a 1-screen graphic above the excerpt.
+            </p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- =========================
+     DROP-IN UPDATE (Website Copy):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - after "Sales Pages" or after "VSL Scripts"
+     ========================= -->
+
+<section class="card pad" id="website-copy" style="margin-top:18px;">
+  <div class="section-head">
+    <div>
+      <h2>Website Copy</h2>
+      <p class="muted">
+        Homepage and About page copy for creators and coaches—positioning, authority-building,
+        content ecosystem mapping, and conversion-focused CTAs.
+        Examples shown as excerpts for scannability.
+      </p>
+
+      <nav class="toc" aria-label="Website copy examples">
+        <a href="#web-1">Homepage</a>
+        <a href="#web-2">About Page</a>
+      </nav>
+    </div>
+
+    <div class="mini-cta">
+      <a class="btn secondary"
+         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+         target="_blank" rel="noopener">View full context →</a>
+    </div>
+  </div>
+
+  <!-- Homepage -->
+  <details id="web-1" open>
+    <summary>Homepage — Creative Business Coach (7-Figure Brand)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Page: Homepage</span>
+          <span class="badge">Goal: Authority + community growth</span>
+          <span class="badge">Mechanism: Ecosystem positioning</span>
+        </div>
+
+        <pre class="copy">HERO SECTION
+Learn how to land consistent clients
+and get paid what you're worth.
+Join hundreds of brand photographers and videographers
+building profitable creative businesses.
+
+PRIMARY CTA
+Join the FREE Creative Biz Builders Community
+
+VALUE STACK
+• Proven package pricing guides ($2k–$5k offers)
+• Cold pitching systems
+• Sales training + retainer frameworks
+
+CONTENT ENGINE
+It all starts with my YouTube channel.
+Weekly lessons on getting more clients,
+raising rates, and building repeatable systems.
+
+AUTHORITY SECTION
+Learn from the guy who’s done it all.
+Since 2020, full-time creative transforming brands.
+Founder of Creative Biz Launch (CBL).
+
+SOCIAL PROOF
+As featured on… [media logos]
+Testimonials + case studies
+
+OFFER PATH
+Free community → YouTube → Instagram → CBL 2.0 → Done-for-you services
+
+SECONDARY CTA
+Turn your creative skills into a thriving business.
+Join CBL 2.0.</pre>
+
+        <p class="note" style="margin-top:12px;">
+          Strategy note: Homepage is structured as a content ecosystem, not a single-offer funnel—
+          designed to capture leads at multiple intent levels.
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <!-- About Page -->
+  <details id="web-2">
+    <summary>About Page — Founder Story + Brand Mission</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Page: About</span>
+          <span class="badge">Arc: 9–5 → proof → mission</span>
+          <span class="badge">Focus: Trust + relatability</span>
+        </div>
+
+        <pre class="copy">ORIGIN STORY
+In 2019, I was fed up with my 9–5.
+Photography was my fastest path to freedom.
+
+I quit during the pandemic with one $500 client.
+Within two years, I worked with 50+ high-paying clients.
+
+PROOF OF DEMAND
+In 2021, I started sharing business lessons on YouTube.
+My inbox flooded with creatives landing clients,
+raising rates, and quitting their jobs.
+
+Today, 75,000+ creatives follow the channel.
+
+BRAND CREATION
+In 2022, I launched Creative Biz Launch (CBL)
+to teach the exact systems I used—without fluff.
+
+MISSION
+Provide creatives with practical, accessible business education
+that isn’t taught in photo or film school.
+
+PHILOSOPHY
+I believe a rising tide lifts all boats.
+Let’s turn your passion into a thriving business.</pre>
+
+        <p class="note" style="margin-top:12px;">
+          Strategy note: About page emphasizes transformation + credibility
+          without over-relying on hype or exaggerated claims.
+        </p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- =========================
+     DROP-IN UPDATE (YouTube Scripts):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - after "VSL" OR after "Website Copy"
+     ========================= -->
+
+     <section class="card pad" id="youtube-scripts" style="margin-top:18px;">
+      <div class="section-head">
+        <div>
+          <h2>YouTube Scripts</h2>
+          <p class="muted">
+            Long-form YouTube scripts written for 7-figure creators—retention-first hooks, comedic punchlines,
+            pattern interrupts, and clear b-roll / editor instructions.
+            Examples shown as excerpts for scannability.
+          </p>
+    
+          <nav class="toc" aria-label="YouTube script examples">
+            <a href="#yt-script-1">Script 1</a>
+            <a href="#yt-script-2">Script 2</a>
+          </nav>
+        </div>
+    
+        <div class="mini-cta">
+          <a class="btn secondary"
+             href="https://www.youtube.com/watch?v=KDsQc0l1_oM"
+             target="_blank" rel="noopener">Related video link →</a>
+        </div>
+      </div>
+    
+      <!-- Script 1 -->
+      <details id="yt-script-1" open>
+        <summary>Script 1 — “Marketing Lessons Hidden in Squid Game” (Witty + scene directions)</summary>
+        <div class="detail-body">
+          <div class="script">
+            <div class="meta">
+              <span class="badge">Format: YouTube essay</span>
+              <span class="badge">Tone: Light + witty</span>
+              <span class="badge">Mechanism: Pop-culture framework</span>
+              <span class="badge">Retention: Pattern interrupts</span>
+              <span class="badge">CTA: Giveaway</span>
+            </div>
+    
+            <pre class="copy">VIDEO IDEA
+    Explains marketing concepts hidden in Season 1 of Squid Game using a 4-part “G.A.M.E.” business framework.
+    Includes bold editor instructions and comedic beats.
+    
+    INTRO (RED LIGHT / GREEN LIGHT OPEN)
+    [Scene opens with you frantically playing Red Light Green Light. Add lasers + people falling.]
+    
+    (out of breath)
+    Would you play a deadly game to fix your business?
+    
+    After analyzing this series…
+    I uncovered a secret 4-part G.A.M.E. business framework hidden in the show.
+    
+    [Cut: rainy field, holding CASH + PS5. Guard with square mask.]
+    
+    AND if you’d like to win this PS5,
+    stick around until the end and I’ll show you how.
+    
+    G — GAUGE YOUR WEAKNESSES (Glass bridge)
+    One wrong move and…
+    your marketing campaign can crash if you don’t identify cracks (weaknesses).
+    
+    A — ANALYZE YOUR DATA (Doll tracks movement)
+    Track metrics like CTR, watch time, conversions.
+    Small tests → repeated adjustments → survival.
+    
+    M — MASTER YOUR AUDIENCE (Marbles)
+    Understand fears, desires, objections.
+    Strong avatar research = easier selling.
+    
+    E — ENTICE YOUR BUYERS (Desperation → decision)
+    If the problem feels urgent and you position the solution clearly,
+    they buy fast.
+    
+    OUTRO + GIVEAWAY
+    Like, subscribe, comment 🦑, share.
+    Winner picked at 4,560 views (nod to player 456).
+    “Squid you later.”</pre>
+    
+            <p class="note" style="margin-top:12px;">
+              Strength: This script combines a recognizable pop-culture “container” with a teachable framework,
+              plus clear b-roll cues that make editing faster and the pacing tighter.
+            </p>
+          </div>
+        </div>
+      </details>
+    
+      <!-- Script 2 -->
+      <details id="yt-script-2">
+        <summary>Script 2 — “6 Mistakes New Language Learners Must Avoid” (Educational authority tone)</summary>
+        <div class="detail-body">
+          <div class="script">
+            <div class="meta">
+              <span class="badge">Format: Educational</span>
+              <span class="badge">Tone: Calm authority</span>
+              <span class="badge">Structure: Listicle</span>
+              <span class="badge">CTA: Subscribe + product mention</span>
+            </div>
+    
+            <pre class="copy">TITLE
+    The 6 biggest mistakes to AVOID as a new language learner
+    
+    INTRO
+    “I’ve learned 20 languages over 50 years…
+    Avoid these mistakes and you’ll reach conversational fluency sooner.”
+    
+    MISTAKE #1: “Too difficult”
+    No language is impossible—time-to-fluency differs by distance from your native language.
+    
+    MISTAKE #2: Not listening enough
+    Early audio feels like noise. Keep listening anyway.
+    Noise → comprehensible speech over time.
+    
+    MISTAKE #3: Trying to memorize everything
+    Don’t brute-force rules. Notice patterns in context.
+    
+    MISTAKE #4: Speaking too early
+    Speak when you want, but prioritize comprehension first.
+    
+    MISTAKE #5: Staying in beginner content too long
+    Move to content you actually enjoy once you know ~500 common words.
+    
+    MISTAKE #6: Using flashcards too much
+    Input matters most: attitude + time + noticing.
+    Vocabulary sticks through repeated context.
+    
+    CONCLUSION
+    Avoid the 6 mistakes, but the key is finding time.
+    Lead into a follow-up video on time management tips.</pre>
+    
+            <p class="note" style="margin-top:12px;">
+              Strength: Clear authority framing, friction-reducing advice, and a smooth bridge to the next video
+              (session time → retention → binge path).
+            </p>
+          </div>
+        </div>
+      </details>
+    
+      <p class="note" style="margin-top:14px;">
+        Tip: If you want a cleaner look, I can convert these into a 2-card grid (“Pop-culture framework” + “Educational listicle”)
+        and open full scripts in a modal instead of expanding inline.
+      </p>
+    </section>
+
+    <!-- =========================
+     DROP-IN UPDATE (Webinars):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - after "Emails" OR after "VSL"
+     ========================= -->
+
+<section class="card pad" id="webinars" style="margin-top:18px;">
+  <div class="section-head">
+    <div>
+      <h2>Webinars</h2>
+      <p class="muted">
+        Full webinar funnels—pre-webinar hype sequences, live webinar scripts, and post-webinar replay + conversion emails.
+        Built to maximize show-up rate, engagement, and applications/sales.
+        Examples shown as excerpts for scannability.
+      </p>
+
+      <nav class="toc" aria-label="Webinar examples">
+        <a href="#webinar-pre">Pre-webinar emails</a>
+        <a href="#webinar-script">Webinar script</a>
+        <a href="#webinar-post">Post-webinar emails</a>
+      </nav>
+    </div>
+
+    <div class="mini-cta">
+      <a class="btn secondary"
+         href="#emails"
+         >Jump to Email samples →</a>
+    </div>
+  </div>
+
+  <!-- Pre-webinar sequence -->
+  <details id="webinar-pre" open>
+    <summary>Pre-Webinar Hype Sequence (7 emails) — YouTube Automation coach</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Asset: Email sequence</span>
+          <span class="badge">Goal: Show-up rate</span>
+          <span class="badge">Mechanisms: Stakes + bonuses + reminders</span>
+          <span class="badge">CTA: Attend live</span>
+        </div>
+
+        <pre class="copy">EMAIL #1 (5 days before)
+Subject: You’re in %FIRSTNAME%
+Angle: Confirmation + commitment + tease 3 gifts (live-only)
+Key detail: “Wednesday, February 19, at 7 PM EST” + save link
+
+EMAIL #2 (4 days before)
+Subject: Why 90% of businesses fail…
+Angle: Call out procrastination → urgency to act
+CTA: Add to calendar
+
+EMAIL #3 (3 days before)
+Subject: The YouTube Automation “secret”
+Angle: Student story (Ethan) + 3-step AI autopilot tease
+CTA: Attend live to learn steps + bonuses
+
+EMAIL #4 (2 days before)
+Subject: YouTube Automation is UNDERsaturated?
+Angle: Objection handling (oversaturated, face needed, views needed)
+CTA: Attend for niches + AI automation + video structure
+
+EMAIL #5 (1 day before)
+Subject: 24 hours left…
+Angle: Humor + “value police” + bonus reminder
+
+EMAIL #6 (6 hours before)
+Subject: Your live webinar in 6 hours…
+Angle: Short reminder + “set reminders for 7 PM EST”
+
+EMAIL #7 (webinar starts)
+Subject: Your webinar with <name> starts now…
+Angle: Direct “join now” link + chat prompt</pre>
+
+        <p class="note" style="margin-top:12px;">
+          Strength: Multi-touch sequence that escalates urgency, handles objections, and increases live attendance with “live-only” bonuses.
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <!-- Webinar script -->
+  <details id="webinar-script">
+    <summary>Sample Webinar Script — YouTube growth coach (VCP framework, live chat engagement)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Asset: Live script</span>
+          <span class="badge">Structure: Rapport → myths → framework → offer</span>
+          <span class="badge">Engagement: Chat prompts</span>
+          <span class="badge">CTA: Apply / enroll</span>
+        </div>
+
+        <pre class="copy">OPEN + RAPPORT
+“Put a YES in the chat if you can hear me.”
+“Where are you tuning in from?”
+
+PROMISE / PROOF
+“How people make $10k/mo working <20 hrs/week”
+3-step VCP framework (Visibility → Consumability → Profitability)
+Proof examples: Carlos (plumber), Steven (high school)
+
+AUTHORITY STORY
+Deloitte job → hated NYC → dream: Madeira → built channel → $10k/mo → quit → moved
+
+CONTENT: 4 MYTHS
+#1 You need expensive equipment (good ENOUGH)
+#2 Certain countries have an advantage (level playing field)
+#3 Best money is AdSense (instead: YouTube entrepreneur sells offer)
+#4 YouTube is oversaturated (still works if system-based)
+
+TEACH: VCP FRAMEWORK
+Visibility: niche + titles/thumbnails/SEO + ideal audience
+Consumability: KLT (know/like/trust) positioning
+Profitability: offer positioning without being pushy
+
+ANCHOR + VALUE CHECK
+Chat prompts: “YES”, “UNDERSTOOD”
+
+TRANSITION TO OFFER (permission close)
+“Would you love to hear the deeper option?”
+
+OFFER: YouTube Intensive
+What they get across VCP steps + timing of offer
+Bonuses: swipe file, personal brand course, AI toolkit
+Scarcity: limited spots + next cycle delay
+Final CTA: apply via link</pre>
+
+        <p class="note" style="margin-top:12px;">
+          Strength: Strong live pacing—repeated chat prompts keep attention and create micro-commitments leading into the offer.
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <!-- Post-webinar sequence -->
+  <details id="webinar-post">
+    <summary>Post-Webinar Sequence (6 emails) — Replay + conversion to mentorship</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Asset: Email sequence</span>
+          <span class="badge">Goal: Replay views + applications</span>
+          <span class="badge">Mechanisms: Expiring replay + bonuses + case studies</span>
+          <span class="badge">CTA: Apply / join</span>
+        </div>
+
+        <pre class="copy">EMAIL #1
+Subject: Your bonuses are inside…
+Angle: “Webinar was insane” + replay link (72h deadline)
+Includes: 3 bonuses (script template, growth tracker, AI toolkit)
+
+EMAIL #2
+Subject: Have you watched the webinar yet?
+Angle: Replay as gift + bullet recap + 48h takedown
+
+EMAIL #3
+Subject: 24 left to watch the replay
+Angle: Hard urgency + recap checklist + “gone forever” framing
+
+EMAIL #4
+Subject: The biggest reason people fail at YouTube
+Angle: Lack of metric-improvement strategy → need expert guidance
+CTA: Apply to 1:1 mentorship
+
+EMAIL #5
+Subject: 16-year-old makes $14k while sleeping
+Angle: Social proof case study + “would it be worth it?” close
+CTA: Join mentorship/tools/community
+
+EMAIL #6
+Subject: Get rich on YouTube with real estate
+Angle: “Digital real estate” analogy + trends change → need expert
+CTA: Apply / build empire</pre>
+
+        <p class="note" style="margin-top:12px;">
+          Strength: Clean replay countdown + escalating proof (bonuses → urgency → mentorship framing → case study → analogy close).
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <p class="note" style="margin-top:14px;">
+    Tip: If you want the cleanest portfolio look, I can turn the email sequences into a compact “timeline” layout
+    (T-5 days → Live → T+72h) with each email opening in a modal.
+  </p>
+</section>
+
+
+
+  <section class="card pad" id="conversion-offers" style="margin-top:18px;">
+    <h2>Conversion & Offers</h2>
+    <p class="muted">Coming next: landing pages, sales pages, product descriptions, website copy.</p>
+    <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View page work →</a>
+  </section>
+
+  <!-- =========================
+     DROP-IN UPDATE (Landing Pages):
+     Add this NEW section to portfolio.html
+     Recommended placement:
+       - right after your "Landing & Sales Pages" card
+       - or as its own card near Ads/Email.
+     ========================= -->
+
+<section class="card pad" id="landing-pages" style="margin-top:18px;">
+  <div class="section-head">
+    <div>
+      <h2>Landing Pages</h2>
+      <p class="muted">
+        Long-form and short-form landing page work across book-a-call pages, opt-ins, advertorials, product pages, and webinar registrations.
+        Examples below are shown as excerpts for scannability.
+      </p>
+
+      <nav class="toc" aria-label="Landing page subcategories">
+        <a href="#lp-book-a-call">Book-a-Call</a>
+        <a href="#lp-opt-in">Opt-In</a>
+        <a href="#lp-advertorial">Pre-sell / Advertorial</a>
+        <a href="#lp-product">Product Page</a>
+        <a href="#lp-webinar">Webinar Page</a>
+        <a href="#lp-pt-opt-in">PT Opt-In</a>
+      </nav>
+    </div>
+
+    <div class="mini-cta">
+      <a class="btn secondary"
+         href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644"
+         target="_blank" rel="noopener">View full context →</a>
+    </div>
+  </div>
+
+  <!-- Book-a-call -->
+  <details id="lp-book-a-call" open>
+    <summary>Book-a-Call Page — Graphic designers (coaching / mastermind)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Type: Book-a-call</span>
+          <span class="badge">Angle: Burnout → scale</span>
+          <span class="badge">Structure: PAS + origin + framework</span>
+        </div>
+
+        <h4>Headline + Subhead</h4>
+        <pre class="copy">Calling out all burnt-out graphic designers…
+Discover the “SIMPLE” Method 500+ Designers Have Used to Scale Their Businesses From $10k/mo to $30k/mo In Under 6 Months.
+Without spending hours studying SEO, attending 10 networking events per month, or posting on social media daily.</pre>
+
+        <h4>Primary CTA</h4>
+        <pre class="copy">Book Your FREE Strategy Call Now
+(Limited slots available. Our experts are waiting…)</pre>
+
+        <h4>Opening (Excerpt)</h4>
+        <pre class="copy">Let me ask you a question…
+When was the last time you woke up without feeling stressed?
+
+If you’re making $5-$10k/mo,
+you’re probably familiar with working endless nights...
+...unappreciative clients who STILL try haggling the price with you.
+
+If that’s the case, I understand this because
+I felt the same way 5 years ago…</pre>
+
+        <h4>Credibility + Proof (Excerpt)</h4>
+        <pre class="copy">After implementing this new framework,
+I scaled to $32k/mo in just under 6 months
+without working more than 30 hours per week.
+
+In 2022 alone, I helped 500+ students 3-10x their rates
+and generate over $40M combined.</pre>
+
+        <h4>Offer + Stack (Excerpt)</h4>
+        <pre class="copy">What’s Included in the Uplevel Mastermind?
+• Simplification funnel to prioritize the highest-leverage tasks
+• System integration method to close more clients and improve delivery quality
+• Preselling mechanism blueprint to position as an expert
+• Proprietary method to differentiate from other designers
+• “1 + 1 = 5 VA” approach to buy back time
+• Community + unlimited 1:1 support from coaches</pre>
+
+        <h4>FAQ (Excerpt)</h4>
+        <pre class="copy">Question: Is there a refund policy?
+Answer: ...there are no refunds.</pre>
+
+        <p class="note" style="margin-top:12px;">
+          Note: For a public portfolio, consider replacing “no refunds” and extreme claims with a neutral excerpt + “Full page available on request.”
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <!-- Opt-in page -->
+  <details id="lp-opt-in">
+    <summary>Opt-In Page — Sports card trading guide (side hustle)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Type: Opt-in</span>
+          <span class="badge">Goal: Lead capture</span>
+          <span class="badge">Structure: Big promise + bullets + scarcity</span>
+        </div>
+
+        <h4>Headline + Subhead</h4>
+        <pre class="copy">Attention Busy Adults Tired of Working Their 9-5:
+Discover the FREE Sports Card Trading Guide: Learn How to Use Your Passion for Sports to Make $5k+/mo With This Proven Yet Untapped Side Hustle Almost No One’s Talking About
+Without needing to quit your job or work 80 hours per week</pre>
+
+        <h4>Bullets (Excerpt)</h4>
+        <pre class="copy">In this FREE guide, you’ll learn:
+✅ The sports trading card side hustle to make $5k/mo+ in 90 days
+✅ The “Prism outlook strategy” to predict future card value
+✅ A networking method to build relationships with other traders</pre>
+
+        <h4>Scarcity (Excerpt)</h4>
+        <pre class="copy">Limited Space Available - Act quickly!
+Our webinar software only allows up to 500 spots...</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- Pre-sell / advertorial -->
+  <details id="lp-advertorial">
+    <summary>Pre-sell / Advertorial — Nootropic supplement (science-led)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Type: Advertorial</span>
+          <span class="badge">Style: Science explainer</span>
+          <span class="badge">Mechanism: Problem → mechanism → ingredients</span>
+        </div>
+
+        <h4>Lead (Excerpt)</h4>
+        <pre class="copy">Breaking News: Scientists Have Discovered The Best Ways to Slow Down Cognitive Decline…
+
+Cognitive decline is very common, especially as people age...
+There are 2 main reasons...
+Neurotransmitters slow down...
+Synapses break down...</pre>
+
+        <h4>Mechanism + Ingredients (Excerpt)</h4>
+        <pre class="copy">Phosphatidylserine can help “protect” neurotransmitters...
+Lion’s Mane can help support synapses...
+
+Click the link below to watch a quick video to learn more.</pre>
+
+        <p class="note" style="margin-top:12px;">
+          For compliance on a public site: avoid medical claims or add a disclaimer; keep this as “writing sample excerpt.”
+        </p>
+      </div>
+    </div>
+  </details>
+
+  <!-- Product page -->
+  <details id="lp-product">
+    <summary>Product Page — 3D contour mulberry silk sleep mask (benefit-led)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Type: Product page</span>
+          <span class="badge">Focus: Benefits + differentiation</span>
+          <span class="badge">Tone: Premium</span>
+        </div>
+
+        <h4>Description (Excerpt)</h4>
+        <pre class="copy">The 3D Contour Silk Sleep Mask offers a luxurious solution...
+Made from 100% pure mulberry silk...
+Contoured design ensures complete blackout...
+OEKO-TEX® certified materials...</pre>
+
+        <h4>Benefits (Excerpt)</h4>
+        <pre class="copy">• Wake up refreshed with 100% blackout silk cups
+• Prevent wrinkles and tame frizz with pure mulberry silk
+• Restful sleep without pressure thanks to contoured padding
+• Temperature-regulating comfort year-round
+• Hypoallergenic, OEKO-TEX® Certified...</pre>
+
+        <h4>Brand Positioning (Excerpt)</h4>
+        <pre class="copy">THIS ISN'T JUST A SLEEP MASK. IT'S THE KEY TO A HEALTHIER, HAPPIER LIFE.
+
+Imagine gently drifting into darkness...
+The Sunday Silks 3D Contour Sleep Mask is more than a sleep aid...</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- Webinar page -->
+  <details id="lp-webinar">
+    <summary>Webinar Registration Page — YouTube automation (AI-led)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Type: Webinar reg</span>
+          <span class="badge">Goal: Signups</span>
+          <span class="badge">Mechanism: Results + bullets + scarcity</span>
+        </div>
+
+        <h4>Headline (Excerpt)</h4>
+        <pre class="copy">Want to make passive income without a college degree?
+Register for the FREE YouTube Automation Webinar:
+Learn how I used AI to Generate Over $100k/mo on YouTube
+Without Scripting, Recording, or Editing any Videos or Showing my Face</pre>
+
+        <h4>Bullets (Excerpt)</h4>
+        <pre class="copy">In this FREE webinar, you’ll learn:
+✅ The NEW “AI system method” used in top AI channels in 2025
+✅ The “Tool strategy” to automate the creation process
+✅ The 3-step growth method to make $10k/mo+</pre>
+
+        <h4>Scarcity (Excerpt)</h4>
+        <pre class="copy">Limited Space Available - Act quickly!
+Zoom only allows up to 500 spots...</pre>
+      </div>
+    </div>
+  </details>
+
+  <!-- PT opt-in page -->
+  <details id="lp-pt-opt-in">
+    <summary>PT Opt-In Page — Runners mobility drills (lead magnet)</summary>
+    <div class="detail-body">
+      <div class="script">
+        <div class="meta">
+          <span class="badge">Type: Opt-in</span>
+          <span class="badge">Audience: Runners</span>
+          <span class="badge">Angle: Pain-free in minutes</span>
+        </div>
+
+        <h4>Headline (Excerpt)</h4>
+        <pre class="copy">Are you a runner tired of pain slowing you down? Introducing…
+The Runner Reset: 3 Science-Based Primal Mobility Drills Runners of all Levels Can Use to Run Pain-Free and Move Better
+Which can all be done from home, in less than 5 minutes...</pre>
+
+        <h4>Problem Framing (Excerpt)</h4>
+        <pre class="copy">Most solutions runners use for their pain have three main problems:
+• They aren’t long-term solutions
+• They don’t target the root cause
+• They’re inconsistent...</pre>
+
+        <h4>Mechanism (Excerpt)</h4>
+        <pre class="copy">These drills go beyond stretching the muscles.
+They reset the fundamental movement patterns your body relies on...</pre>
+
+        <h4>CTA (Excerpt)</h4>
+        <pre class="copy">Get Free Access to the Mobility Drills Guide Now.
+Enter your name and email, and I’ll send it to you right away.</pre>
+      </div>
+    </div>
+  </details>
+
+  <p class="note" style="margin-top:14px;">
+    If you want, I can convert each landing page into a consistent “tile” grid (Book-a-call / Opt-in / Product / Webinar),
+    and each tile opens a modal with the excerpt + “Request full version” CTA.
+  </p>
+</section>
+
+
+  <section class="card pad" id="longform" style="margin-top:18px;">
+    <h2>Long-Form Persuasion</h2>
+    <p class="muted">Coming next: VSLs, webinars, longer scripts.</p>
+    <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View long-form →</a>
+  </section>
+
+  <section class="card pad" id="authority" style="margin-top:18px;">
+    <h2>Authority Content</h2>
+    <p class="muted">Coming next: LinkedIn posts, organic reels, captions.</p>
+    <a class="btn secondary" href="https://arvindmanohar.notion.site/Arvind-M-Copywriting-Portfolio-ff3a72da7c064810ab9061f6600ed644" target="_blank" rel="noopener">View authority content →</a>
+  </section>
+
+  <!-- RESULTS -->
   <section class="card pad" style="margin-top:18px;">
     <h2>Selected Results</h2>
     <p class="muted">Highlights from recent work.</p>
@@ -115,9 +3555,7 @@
 </main>
 
 <script>
-  // Update year in footer
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
-
