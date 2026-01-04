@@ -60,58 +60,62 @@
   <section class="card pad" style="margin-top:28px;">
     <h1>Testimonials</h1>
     <p class="muted" style="margin-bottom:24px;">
-      Feedback from clients and partners I've worked with.
+      Feedback from clients and partners I've worked with — across eCommerce, content brands, and coaching offers.
     </p>
+  </section>
+
+  <!-- Updated testimonial cards populated from PDF screenshots -->
+  <section class="grid" style="margin-top:18px;">
+    <div class="card pad">
+      <h2>“Exceptional contractor.”</h2>
+      <p class="muted" style="font-style:italic; margin-bottom:18px;">
+        "Exceptional contractor… delivered high-quality work, met deadlines, and maintained excellent communication."
+      </p>
+      <p class="muted" style="font-size:12px;">
+        — 7-figure eCommerce & short-term rental business owner
+      </p>
+    </div>
+
+    <div class="card pad">
+      <h2>Clear, on-brand copy</h2>
+      <p class="muted" style="font-style:italic; margin-bottom:18px;">
+        "Consistently clear, on-brand and conversion-focused… responsive, open to feedback, and independent."
+      </p>
+      <p class="muted" style="font-size:12px;">
+        — B2B coach (86k+ YouTube subscribers)
+      </p>
+    </div>
   </section>
 
   <section class="grid" style="margin-top:18px;">
     <div class="card pad">
-      <h2>Client Feedback</h2>
+      <h2>Brand alignment</h2>
       <p class="muted" style="font-style:italic; margin-bottom:18px;">
-        "Arvind's copy consistently drives results. The structured approach to testing and iteration
-        has helped us scale our ad performance significantly."
+        "These are much more aligned with our branding!"
       </p>
       <p class="muted" style="font-size:12px;">
-        — Marketing Director, 9-figure eCommerce brand
+        — 8-figure eCommerce jewelry store business owner
       </p>
     </div>
-    <div class="card pad">
-      <h2>Results-Driven</h2>
-      <p class="muted" style="font-style:italic; margin-bottom:18px;">
-        "Working with Arvind has been a game-changer. The copy is not just well-written, it's built
-        for conversion and backed by data-driven insights."
-      </p>
-      <p class="muted" style="font-size:12px;">
-        — Growth Marketing Lead, DTC brand
-      </p>
-    </div>
-  </section>
 
-  <section class="card pad" style="margin-top:18px;">
-    <h2>Performance Highlights</h2>
-    <div class="results" style="margin-top:18px;">
-      <div class="stat">
-        <strong>50+ ads/week</strong>
-        <span>Consistent output for high-volume campaigns</span>
-      </div>
-      <div class="stat">
-        <strong>4.92% CTR</strong>
-        <span>Meta ad performance at scale</span>
-      </div>
-      <div class="stat">
-        <strong>561% spike</strong>
-        <span>Sales lift during Black Friday campaigns</span>
-      </div>
+    <div class="card pad">
+      <h2>Fast + dependable</h2>
+      <p class="muted" style="font-style:italic; margin-bottom:18px;">
+        "Man you are a machine. Thx for sending — will have a look when I can."
+      </p>
+      <p class="muted" style="font-size:12px;">
+        — CEO, 7-figure eCommerce wellness brand
+      </p>
     </div>
   </section>
 
   <section class="card pad" style="margin-top:18px;">
     <h2>What Clients Say</h2>
     <ul class="bullets" style="margin-top:12px;">
-      <li><strong>Fast turnaround:</strong> Quick iteration on winners, rapid cuts on losers</li>
-      <li><strong>Clear communication:</strong> Detailed briefs and instructions for seamless collaboration</li>
-      <li><strong>Data-focused:</strong> Copy tied to measurable outcomes, not vanity metrics</li>
-      <li><strong>Strategic thinking:</strong> Beyond writing — helps decide what to test and scale</li>
+      <li><strong>Reliable delivery:</strong> High-quality work, consistently meeting deadlines</li>
+      <li><strong>Clear collaboration:</strong> Strong communication + direction that keeps execution moving</li>
+      <li><strong>Conversion-focused:</strong> Copy that’s clear, on-brand, and built to convert</li>
+      <li><strong>Strategic thinking:</strong> Testing/iteration mindset to find and scale winners</li>
     </ul>
   </section>
 
@@ -123,11 +127,11 @@
 <script>
   // Update year in footer
   document.getElementById('y').textContent = new Date().getFullYear();
-  
+
   // Mobile menu toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.links');
-  
+
   if (menuToggle) {
     menuToggle.addEventListener('click', function() {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
@@ -135,7 +139,7 @@
       navLinks.classList.toggle('active');
       menuToggle.classList.toggle('active');
     });
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
       if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
@@ -144,7 +148,7 @@
         menuToggle.classList.remove('active');
       }
     });
-    
+
     // Close menu when clicking a link
     const navLinksItems = navLinks.querySelectorAll('a');
     navLinksItems.forEach(link => {
@@ -158,4 +162,3 @@
 </script>
 </body>
 </html>
-
